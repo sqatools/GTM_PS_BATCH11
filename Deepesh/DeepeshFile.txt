@@ -1,1 +1,2 @@
 Adding file to common repo
+This second line adding to file

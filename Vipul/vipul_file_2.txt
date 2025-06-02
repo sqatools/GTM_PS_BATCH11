@@ -1,1 +1,2 @@
 Hello please ocnsider my second file for git commands.
+I will do the smart work.

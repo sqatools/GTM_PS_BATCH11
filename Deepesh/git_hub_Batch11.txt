@@ -1,0 +1,43 @@
+############ Common Repo Access ##############
+1.  Open git terminal in PythonAutomation project folder.
+
+2.  clone new repository with command
+    -> git clone https://github.com/sqatools/GTM_PS_BATCH11.git
+
+3.  Once clone is successful, check new repo folder should be available in project folder.
+    e.g. GTM_PS_BATCH11
+
+4.  Open GTM_PS_BATCH11 folder and create a folder with your name
+    e.g.  Vipul
+    -> Add text file inside your folder and add some content to the file.
+
+5. Go to git terminal to navigate to repo folder with command
+   ->  cd  GTM_PS_BATCH11
+
+6. Check newly added folder status with command
+   ->  git status
+   ->  new folder will show in red color
+
+7.  Run git add command add the folder
+   ->  git add <folder_name>
+
+8.  Check status again with below command
+    ->  git status :
+    ->  New folder will show in green color
+
+9.  Initiate the commit operation
+    -> git commit -m "Added folder to repo"
+
+10. Initiate push operation with below command
+    ->  git push
+    # It may be possible your push operation is rejected.
+    # if push operation is rejected the run update repo with command
+    -> git pull
+    # It will open git editor, close the edit with command
+    ->  :wq at end of the editor
+    # It will update local repo with server.
+
+
+
+
+

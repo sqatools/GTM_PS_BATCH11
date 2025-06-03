@@ -1,0 +1,169 @@
+Create Git account and Create a Repository.
+
+1.  Open GitHub.com website
+2. click on signup link
+3. Enter your email id and click on signup button
+4. Enter unique password
+5. Enter unique username.
+6. Select Country 
+7. click on continue button.
+8.  verify account with puzzle
+9. Once account is verified then will once code on mail
+   ->  enter code in required field.
+10.  Enter your username and password.
+   ->  successful login to GitHub account.
+
+###### Create New Repository ######
+
+1. Login to GitHub account
+2. Click on Create repository button
+3. Provide Unique Repository Name
+4. Provide description
+5. Select Private/Public repository option. e.g. Public
+6. Select readme checkbox.
+7. click on create repository button.
+8. Repository created successfully.
+
+9.  If we login back to GitHub account, then repository name will show in left side of page.
+     ->  click on repository name. 
+     ->  All details of repository will be visible.
+
+############### Install Git client ####################
+
+1. Download git client from given location
+   Mac User : https://git-scm.com/downloads/mac
+   Win User : https://git-scm.com/downloads/win
+
+2. Once the download is successful.
+3. Initiate client installation -> continue click on next button and  install it.
+
+4. Installation should be successful.
+
+
+5. Create a  folder in any of the driver with name
+   PythonAutomation
+
+6. Open folder and right click inside the folder
+    than click on show more option
+
+7. Then git Bash and git GUI, these two options will be visible in right click options.
+
+8. Select Git Bash and click on it ->  It will open git terminal
+
+9.  Run command 'git --help' -> I will show all available commands of git.
+
+############### Git client configuration ####################
+
+1.  GO to GitHub server, and get repository URL.
+    -> click on repository name
+    -> click on code button :  It will show git URL
+    -> copy git URL
+
+
+2.  Go to local directory that we have created previously with name PythonAutomation
+
+3. Open directory and right click in side the folder.
+
+4. Select open git bash here option ->  It will open git terminal in current directory.
+
+5. initiate repository clone task with given command
+   ->  git clone <repository_url>
+       git clone https://github.com/Gopikishancode/AutomationRepo.git
+   ->  hit enter.
+
+6.  Repository will be clone successfully and it will create a folder with repository name.
+
+7.  Create a text file inside the repository folder.
+
+8.  Go  git terminal and navigate inside the repository folder with given command
+    ->  cd <Repo Dir Name>
+
+9.  Check newly added file status with command 
+    ->  git status :  new file will show in red color
+
+10. Add file to git with given command
+    ->  git add <filename>
+
+11.  check file status again
+    ->  git status
+
+
+12. initiate commit operation with command
+    ->  git commit -m "Adding file to git "
+
+13.  Run user configuration commands
+      -> git config --global user.email "gopikishanbose@gmail.com"
+      -> git config --global user.name "Gopikishan"
+
+14.  Re-initiate the commit operation 
+     ->  git commit -m "Add first file"
+     ->  commit operation is successful
+
+15.  Push code to the server with given command
+     ->  git push
+     ->  It will launch a popup to authorize the ecosystem.
+     -> Select open in browser option
+     -> Provide Git credentials
+     ->  click on Authorize git-ecosystem button
+     ->  push operation is successful
+
+16.  Go to git and verify file is successfully pushed to the server.
+     ->  File should be visible inside the repository folder.
+
+
+17.  For any further modification or new files
+     we have to run these command 
+    ->  git status
+    ->  git add <filename>
+    ->  git commit -m "commit msg"
+    ->  git push
+
+
+
+#######################  Git Multi Branching Feature ############################
+
+
+1. Go to git server branch dropdown ->  click on view all branches.
+2. Create new branch
+   -> click to new branch branch button
+   -> provide your branch name as e.g. deepesh_branch
+   -> click on create button
+   -> branch should be created successfully.
+
+
+3. Switch to feature branch in local system
+   ->  Open terminal in repo folder
+   ->  Run 'git pull' command to update the repo changes
+   ->  Check current active branch with command 'git branch'
+   ->  main should show as green
+   ->  switch to newly created branch with command  'git checkout branch_name'
+   ->  check current active branch again with 'git branch'
+   ->  Newly created branch should show in green color.
+
+4. Now Add file in your folder and push to feature branch
+   ->  go to your folder name in local directory.
+   ->  create a file inside your folder.
+   ->  go to git terminal
+   ->  then run command 'git add .'
+   ->  initiate commit operation 'git commit -m "msg"'
+   ->  initiate push operation 'git push'
+   ->  New file should push your folder in feature branch.
+
+5.   Raise a pull from server
+   ->  click on pull request button
+   ->  provide pull request description
+   ->   Add reviewer in the pull request
+   ->   Reviewer will receive the notification on mail.
+   ->  review will approve the PR
+   ->  Now user can merge changes to main branch
+   ->  All feature branches changes will visible in main branch.
+
+
+
+
+   
+
+
+
+
+

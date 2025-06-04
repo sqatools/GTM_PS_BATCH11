@@ -18,7 +18,7 @@ print("Value of r :", r)
 
 print ("-"*50)
 a = 22
-b = 10
+b = 12
 LHS = (a-b)**2
 print("LHS output :",LHS)
 

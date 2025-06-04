@@ -11,12 +11,12 @@ print("rhs output :", rhs)
 print(lhs == rhs) # True
 
 #(a-b)^2 = a^2 +b^2 - 2ab
-a = 8
-b = 9
+a = 5
+b = 20
 lhs = (a-b)**2
 print("lhs out :", lhs)
 
-rsh = a**2 + b**2 - 2*a*b
+rhs = a**2 + b**2 - 2*a*b
 print("rhs output :", rhs)
 
 print(lhs == rhs)
@@ -24,12 +24,12 @@ print(lhs == rhs)
 #(a-b)(a+b) = a^2 -b^2
 
 a = 10
-b = 12
+b = 5
 
 lhs = (a-b)*(a+b)
 print("lhs output :", lhs)
 
 rsh = a**2 - b**2
-print("rhs output :", rhs)
+print("rhs output :", rsh)
 
-print(lhs == rhs)
+print(lhs == rsh)

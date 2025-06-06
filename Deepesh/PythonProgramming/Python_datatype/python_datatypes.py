@@ -280,3 +280,48 @@ print(dict2)
 
 str1 = "We are 'learning' python"
 print(str1[11]) # r
+
+
+print("_"*50)
+########################### set data type ################
+"""
+Properties:
+-> Set is mutable data type.
+-> Set contains unique values, duplicate data is not allowed
+-> Set store values in random order.
+-> Set only contains immutable data type as member. 
+   e.g. int, float, string, tuple, boolean
+"""
+
+set1 = {4, 5, 5.6, 'Hello', (5, 7, 8), True, None, 4, 5}
+print(set1, type(set1))
+# {None, True, 'Hello', 4, 5.6, 5, (5, 7, 8)} <class 'set'>
+
+set1.add(200)
+print("set1 :", set1)
+# {None, True, 4, 5, 5.6, 'Hello', 200, (5, 7, 8)}
+
+# List, set, dict can not be a member of set data type
+#set2 = {4, 5, 5.6, 'Hello', (5, 7, 8), True, None, 4, 5, [5, 11, 4]}
+#print(set2)
+# TypeError: unhashable type: 'list'
+
+print("_"*50)
+########################### Boolean ################
+"""
+Properties:
+->  Boolean is immutable data type
+->  Boolean has two values only True or False
+->  Boolean values are output of any condition that we are matching.
+"""
+
+v1 = True
+v2 = False
+print(v1, type(v1))  # True <class 'bool'>
+print(v2, type(v2))  # False <class 'bool'>
+
+n1 = 500
+n2 = 700
+n3 = 500
+print(n1 == n2) # False
+print(n1 == n3) # True

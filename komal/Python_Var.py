@@ -179,7 +179,7 @@ print("_"*50)
 a = 5
 b = 6
 lhs = (a+b)**2
-print("lhs output :", lhs) # 121
+print("lhs output :", lhs)
 
 rhs = a**2 + b**2 + 2*a*b
 print("rhs output :", rhs)

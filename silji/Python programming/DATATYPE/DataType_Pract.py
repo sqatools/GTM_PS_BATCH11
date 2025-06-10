@@ -87,3 +87,6 @@ print(set1)
 
 set1.add(500)
 print(set1)
+
+set2={45,55,55.6,"hey",(8,90,10),True,None,47,57}
+print(set2)

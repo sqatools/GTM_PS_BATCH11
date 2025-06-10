@@ -41,3 +41,26 @@ s = ((a + b + c)/3)
 print ("Average of given numbers :",s)
 
 print ("-"*50)
+
+'''
+Python program to print the square and cube of a given number.
+Input :
+num1 = 9
+Output :
+Square = 81
+Cube =   729
+'''
+num1 = 9
+
+print(num1**2)
+print(num1**3)
+
+print ("-"*50)
+
+### Python program to interchange values between variables. ###
+
+a = 10
+b = 20
+
+a , b = b , a
+

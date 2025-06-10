@@ -4,6 +4,7 @@ a = 20
 # 10 : data value
 print(a)
 
+# this will give the address of the variable
 print(id(a)) # 140715319904984
 
 b = 20
@@ -179,7 +180,7 @@ print("_"*50)
 a = 5
 b = 6
 lhs = (a+b)**2
-print("lhs output :", lhs) # 121
+print("lhs output :", lhs)
 
 rhs = a**2 + b**2 + 2*a*b
 print("rhs output :", rhs)

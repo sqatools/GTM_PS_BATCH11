@@ -38,3 +38,6 @@ print("LHS output :", LHS)
 
 RHS = a**2 - b**2
 print("RHS output :", RHS)
+
+
+print ("-"*50)

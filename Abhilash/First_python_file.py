@@ -66,3 +66,16 @@ a , b = b , a
 
 print("a:",a)
 print("b:",b)
+
+print ("-"*50)
+
+######Python program to solve the given math Formula : (a + b)2 = a^2 + b^2 + 2ab ###
+
+a = 1
+b = 2
+
+RHS = a**2 + b**2 + 2*a*b
+print("(a + b)^2:",RHS)
+
+print ("-"*50)
+

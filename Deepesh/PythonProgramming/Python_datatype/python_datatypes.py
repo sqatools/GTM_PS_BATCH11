@@ -199,10 +199,12 @@ print(list4[-5]) # 7
 
 
 list5 = [25, 17, [3, 5, 7], 88, 12, 'Python']
+
+
 print(list5[2]) # [3, 5, 7]
 print(list5[2][1]) # 5
 print(list5[-1]) # Python
-print(list5[-1][3]) # h
+print(list5[-1][-4]) # h
 
 print("-"*40)
 ############################# Tuple #######################

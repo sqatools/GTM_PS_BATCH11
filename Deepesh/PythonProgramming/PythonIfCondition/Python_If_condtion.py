@@ -166,4 +166,89 @@ else:
 
 
 
+print("_"*40)
+###########################################
+# write a python program to print the number is even and odd
+n1 = 51
+result = "even" if n1%2 == 0 else "odd"
+print(result)
 
+# if condition in print statement
+print("even" if n1%2 == 0 else "odd")
+
+print("_"*50)
+#################################################
+# program to print electricity bill as per the unit consumed
+# if unit <= 100 : per unit charge is 15 rupee
+# if unit > 100 and less tha 300 :  per unit charge is 25 rupee.
+# if unit > 300 : per unit charge is 50 rupee
+
+no_unit = 301
+total_bill = 0
+if no_unit <= 100:
+    total_bill = total_bill + no_unit*15
+
+elif 100 < no_unit < 300:
+    total_bill = total_bill + no_unit*25
+elif no_unit > 300:
+    total_bill = total_bill + no_unit*50
+
+
+print("Total bill amount :", total_bill)
+
+
+########################### In and not in operator #############################
+list1 = [5, 7, 9, 22, 55]
+v1 = 50
+v2 = 22
+
+print("_"*50)
+if v2 in list1:
+    print("V2 is available in the list :", v2)
+else:
+    print("V2 is not available in the list :", v2)
+
+
+print("_"*50)
+
+if v1 not in list1:
+    print("V1 is not available in the list1 :", v1)
+else:
+     print("V1 is available in the list1 :", v1)
+
+
+########################### is/is not operator #############################
+a1 = "Hello"
+b1 = None
+c1 = False
+
+# check for exact value
+print("_"*50)
+if a1 is True:
+    print("A1 has true value")
+else:
+    print("A1 has false value")
+
+# check for exact value
+print("_"*50)
+if a1 == True:
+    print("a1 has true value")
+else:
+    print("a1 has false value")
+
+
+# check for variable has non null/not false value
+print("_"*50)
+# expected value for a1 is True
+if a1:
+    print("a11 has true value")
+else:
+    print("a11 has false value")
+
+
+print("_"*50)
+# is not operator: this operator check for not
+if c1 is not True:
+    print("C1 has False value")
+else:
+    print("C1 has True value")

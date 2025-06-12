@@ -255,8 +255,10 @@ for i in range(1, 6): # i = 1, 2, 3
     print()
 
 
+print("_"*50)
 # while loop
 ############################################
+# class work
 # Q1: code for following pattern
 """
 * * * * *
@@ -265,5 +267,28 @@ for i in range(1, 6): # i = 1, 2, 3
 * *
 *
 """
+
+for i in range(1, 6): # i = 1, 2, 3, 4, 5
+    for j in range(6, i, -1): # j = (6, 1)
+        print("*", end=" ")
+    print()
+
+
+
+
+
+print("_"*50)
+
+for i in range(5, 0, -1):
+        print("* "*i)
+
+
+print("_"*50)
+########################################
+
+for i in range(6, 1, -1):
+    for j in range(1, i, 1): # j = (1, 6)
+        print(j, end=" ")
+    print()
 
 # Q2: list of all the prime number from1 to 100

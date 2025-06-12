@@ -79,3 +79,51 @@ print("(a + b)^2:",RHS)
 
 print ("-"*50)
 
+### Python program to solve the given math formula.Formula : (a – b)2 = a^2 + b^2 – 2ab ##
+a = 1
+b = 2
+
+Result = a**2 + b**2 - 2*a*b
+print("(a – b)2:",Result)
+
+print ("-"*50)
+
+# Q1: code for following pattern
+"""
+* * * * *
+* * * *
+* * *
+* *
+*
+"""
+
+n = 5
+i = 1
+while i <= n :
+    j = n
+    while j >=i:
+        print ("*", end = " ")
+        j -=1
+    print()
+    i +=1
+
+print("-"*50)
+
+################################
+for i in range(1, 6):
+    for j in range(6, i, -1):
+        print("*", end=" ")
+    print()
+
+print("-"*50)
+
+##Q2: list of all the prime number from1 to 100 ##
+
+for num in range(2,101):
+    for i in range(2, num):
+        if num % i ==0:
+           break
+    else:
+         print(num, end=" ")
+
+

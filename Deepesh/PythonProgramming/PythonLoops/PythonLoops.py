@@ -140,4 +140,130 @@ if prime:
 else:
     print("This is not a prime number :", num)
 
+print("_"*50)
+########################################
+# Nested for loop condition
+# for each value of outer loop entire inner loop will execute.
 
+# Two level nested loop
+"""
+# outer loop
+for i in range(1, 6): # i = 1, 2
+    print("address :", i)
+    for j in range(1, 4): # j = 1, 2, 3
+        print("Package :", j)
+
+    print("+"*50)
+"""
+
+
+
+
+# Three level nested loop
+for i in range(1, 4): # i = 1, 2
+    print("address :", i)
+    for j in range(1, 4): # j = 1, 2, 3
+        print("Package :", j)
+        for k in range(1, 3):
+            print("Item :", k)
+
+    print("+"*50)
+
+
+print("_"*50)
+###########################################
+# solve below pattern program with the help of nested loop
+
+"""
+*         # i =1
+* *       # i =2
+* * *     # i =3
+* * * *   # i =4
+* * * * * # i =5
+"""
+
+for i in range(1, 6):
+    for j in range(1, i+1):
+        print("*", end=" ")
+    print()
+
+
+# pyramid with numbers
+"""
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+"""
+
+for i in range(1, 6):
+    for j in range(1, i+1):
+        print(j, end=" ")
+    print()
+
+
+
+# pyramid with letter
+"""
+A 
+B C 
+D E F 
+G H I J
+K L M N O 
+"""
+
+# Capital letter ASCII value
+# 65-90
+
+# small letter ASCII value
+# 97-122
+
+# get character with the help ascii value
+print(chr(65)) # A
+
+
+# get ascii value with letter
+print(ord('Z'))  # 90
+
+for i in range(65, 91):
+    print(chr(i), end=" ")
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+print()
+for i in range(97, 123):
+    print(chr(i), end=" ")
+
+# a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+
+print()
+print("_"*50)
+# program to print pyramid with letters
+"""
+A 
+B C 
+D E F 
+G H I J 
+K L M N O 
+"""
+temp = 64
+for i in range(1, 6): # i = 1, 2, 3
+    for j in range(1, i+1): # j = (1, 2), (1, 3), (1, 4)
+        temp += 1 # 65 | 66, 67 | 68, 69, 70
+        print(chr(temp), end=" ") # chr(65), chr(66/67), chr(68/69/70)
+    print()
+
+
+# while loop
+############################################
+# Q1: code for following pattern
+"""
+* * * * *
+* * * *
+* * *
+* *
+*
+"""
+
+# Q2: list of all the prime number from1 to 100

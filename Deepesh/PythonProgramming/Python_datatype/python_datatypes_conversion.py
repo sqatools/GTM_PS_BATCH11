@@ -268,3 +268,122 @@ print(b1, type(b1))  # False <class 'bool'>
 t2 = (4, 6, 7)
 b2 = bool(t2)
 print(b2, type(b2)) # True <class 'bool'>
+
+
+################################ dict ################################
+print("_"*50)
+## dict -> int ###onversion is not possible
+## dict -> float ###onversion is not possible
+## dict -> string ###onversion is not possible
+dict1 = {'a': 123, 'b': 456}
+str1 = str(dict1)
+print(str1, type(str1), str1[0], str1[6])
+# {'a': 123, 'b': 456} <class 'str'> { 1
+
+
+print("_"*50)
+#### dict ->  list ######
+dict2 = {'a': 123, 'b': 456}
+list2 = list(dict2)
+print(list2, type(list2)) # ['a', 'b'] <class 'list'>
+
+
+print("_"*50)
+#### dict ->  tuple ######
+dict3 = {'a': 123, 'b': 456}
+tup3 = tuple(dict3)
+print(tup3, type(tup3))  # ('a', 'b') <class 'tuple'>
+
+
+print("_"*50)
+#### dict ->  set ######
+dict4 = {'a': 123, 'b': 456, 'c': 678}
+set4 = set(dict4)
+print(set4, type(set4))
+# {'a', 'b', 'c'} <class 'set'>
+
+
+print("_"*50)
+#### dict ->  bool ######
+d1 = {}
+b1 = bool(d1)
+print(b1, type(b1))  # False <class 'bool'>
+
+d2 = {'A': 123}
+b2 = bool(d2)
+print(b2, type(b2))  # True <class 'bool'>
+
+
+################################################### Set ##########################################
+print("_"*50)
+#### set ->  int ###### conversion is not possible
+#### set ->  float ###### conversion is not possible
+#### set ->  string ######
+set1 = {6, 2, 7, 12}
+str1 = str(set1)
+print(str1, type(str1), str1[1])
+# {2, 12, 6, 7} <class 'str'> 2
+
+
+print("_"*50)
+#### set ->  list ######
+set2 = {6, 2, 7, 12}
+list2 = list(set2)
+print(list2, type(list2))
+# [2, 12, 6, 7] <class 'list'>
+
+
+print("_"*50)
+#### set ->  tuple ######
+set3 = {6, 2, 7, 12, 5, 77}
+tup2 = tuple(set3)
+print(tup2, type(tup2))
+# (2, 5, 6, 7, 12, 77) <class 'tuple'>
+
+
+print("_"*50)
+#### set ->  dict ###### # conversion not possible
+
+
+print("_"*50)
+#### set ->  bool ######
+set1 = set()
+b1 = bool(set1)
+print(b1, type(b1)) # False <class 'bool'>
+
+set2 = {5, 7, 8}
+b2 = bool(set2)
+print(b2, type(b2))  # True <class 'bool'>
+
+
+
+########################### Bool #########################
+
+
+print("_"*50)
+#### bool ->  int ######
+b1 = True
+n1 = int(b1)
+print(n1, type(n1))  # 1 <class 'int'>
+
+
+print("_"*50)
+#### bool ->  float ######
+b2 = False
+f2 = float(b2)
+print(f2) # 0.0
+
+
+print("_"*50)
+#### bool ->  string ######
+b3 = True
+s3 = str(b3)
+print(s3, type(s3), s3[0])
+# True <class 'str'> T
+
+
+print("_"*50)
+#### bool ->  list ###### conversion is not possible
+#### bool ->  tuple ###### conversion is not possible
+#### bool ->  dict ###### conversion is not possible
+#### bool ->  set ###### conversion is not possible

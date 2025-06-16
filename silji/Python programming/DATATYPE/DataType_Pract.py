@@ -90,3 +90,10 @@ print(set1)
 
 set2={45,55,55.6,"hey",(8,90,10),True,None,47,57}
 print(set2)
+
+#Boolean
+b1=100
+b2=200
+b3=100
+print(b1==b2) #False
+print(b1==b3) #True

@@ -79,6 +79,8 @@ Rule1 : str[start_index: last_index]
 ->  Output string will always from left to right, can not get string in reverse
 ->  If we dont define the start_index, then default first_index value is Zero (0)
 ->  If we dont define the last_index, then default last_index value is end of string
+->  start_index and last_index could be negative as well.
+->  both +ve -ve or -ve +ve value can be included in the output.
 
 """
 strx = "India is a Best Country"
@@ -95,3 +97,69 @@ print(strx[1:-1])  # ndia is a Best Countr
 print(strx[-14:17]) # a Best C
 
 print(strx[10:0]) # Empty list
+
+print(strx[-15:-5]) #  a Best Co
+
+
+print("_"*50)
+##########################
+"""
+Rule2 : str[start_index: last_index: step_value]
+-> output string will include start_index and exclude last_index value.
+-> start_index and end_index could be +ve or -ve
+-> default start_index value is zero (0) if step value is +ve.
+-> default start_index value is -1 if step value is -ve
+-> default last_index value is end of the string if step_value is +ve
+-> default last_index value is start of the string if step_value is -ve
+
+"""
+
+stry = "We Are Learning Python"
+
+print(stry[2: 10: 1]) # Are Lea
+print(stry[1: 12: 2]) # eAeLan
+
+# default start_index value is zero (0) if step_value is +ve.
+print(stry[:15:1]) # We Are Learning
+
+# default start_index value is -1 if step value is -ve
+print(stry[:15:-1]) # nohtyP
+print(stry[:-16:-1]) # nohtyP gninrae
+print(stry[:10:-2]) # nhy nn
+print(stry[:-20:-2])  # nhy nnaLeA
+
+
+# default last_index value is end of the string if step_value is +ve
+strz = "We Are Learning Python"
+print(strz[2::1]) #  Are Learning Python
+
+# default last_index value is start of the string if step_value is -ve
+print(strz[-2::-1]) # ohtyP gninraeL erA eW
+
+
+print(strz[::1]) # We Are Learning Python
+print(strz[::-1]) # nohtyP gninraeL erA eW
+#print(strz[-1:-len(str):-1])
+
+w1 = strz[16:]
+print(w1) # Python
+w1p1 = w1[:3]
+w1p2 = w1[:-4:-1]
+print(f"{w1p1}{w1p2}") # Pytnoh
+
+"""
+Slicing Home Work
+str1 = Virat is Great India Batsman
+# repeat first and last character three times
+op1 = VVVirat is Great India Batsmannn
+
+# repeat first and last character 2 times of each word.
+op2 = VViratt iiss GGreatt IIndiaa BBatsmann
+
+# replace first and last character each word from given string
+op3 = tiraV si treaG andiI natsmaB
+
+# repeat each vowels 2 times in given string
+op4 = Viiraat iis Greeaat IIndiiaa Baatsmaan
+
+"""

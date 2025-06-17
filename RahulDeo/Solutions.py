@@ -1,4 +1,5 @@
 # Question 1
+import datetime
 from audioop import avg
 
 a = 30
@@ -203,3 +204,10 @@ r=10
 t=5
 
 print ("simple interest: ", (P+(P/r)*t))
+
+# Question 20
+print("_"*50)
+
+import datetime
+date = datetime.datetime.now()
+print(date)

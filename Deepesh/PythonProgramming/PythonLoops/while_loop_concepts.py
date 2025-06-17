@@ -70,3 +70,4 @@ while num > 0: # 12 > 0 | 1 > 0 | 0> 0
     num = num//10 # 12, 1, 0
 
 print("reverse value :", reverse)
+

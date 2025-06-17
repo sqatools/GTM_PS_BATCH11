@@ -131,15 +131,17 @@ for num in range(2,101):
 print("-"*50)
 
 """
-   * * *       # i = 0
-       *   *   # i = 1
-   * * * * *   # i = 2
-   *   *       # i = 3
-       * * *   # i = 4
+
+* * *       # i = 0
+    *   *   # i = 1
+* * * * *   # i = 2
+*   *       # i = 3
+    * * *   # i = 4
+    
 """
 
 for i in range(5):
-    for j in range (1,6):
+    for j in range (6):
         if i == 0 and j in (1,2,3):
             print ("*", end = " ")
         elif i == 1 and j in (3,5):
@@ -166,7 +168,7 @@ print("-"*50)
 
 '''
 for i in range(5):
-    for j in range (1,6):
+    for j in range (6):
         if i == 0 and j in (1,3,4,5):
             print ("*", end = " ")
         elif i == 1 and j in (1,3):

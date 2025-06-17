@@ -79,8 +79,11 @@ Rule1 : str[start_index: last_index]
 ->  Output string will always from left to right, can not get string in reverse
 ->  If we dont define the start_index, then default first_index value is Zero (0)
 ->  If we dont define the last_index, then default last_index value is end of string
+<<<<<<< HEAD
+=======
 ->  start_index and last_index could be negative as well.
 ->  both +ve -ve or -ve +ve value can be included in the output.
+>>>>>>> a082c4bbec2b3be11c133106bb237162eb5739fa
 
 """
 strx = "India is a Best Country"
@@ -97,6 +100,8 @@ print(strx[1:-1])  # ndia is a Best Countr
 print(strx[-14:17]) # a Best C
 
 print(strx[10:0]) # Empty list
+<<<<<<< HEAD
+=======
 
 print(strx[-15:-5]) #  a Best Co
 
@@ -163,3 +168,4 @@ op3 = tiraV si treaG andiI natsmaB
 op4 = Viiraat iis Greeaat IIndiiaa Baatsmaan
 
 """
+#>>>>>>> a082c4bbec2b3be11c133106bb237162eb5739fa

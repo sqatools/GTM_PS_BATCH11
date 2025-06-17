@@ -272,9 +272,9 @@ print(b2, type(b2)) # True <class 'bool'>
 
 ################################ dict ################################
 print("_"*50)
-## dict -> int ###onversion is not possible
-## dict -> float ###onversion is not possible
-## dict -> string ###onversion is not possible
+## dict -> int ###conversion is not possible
+## dict -> float ###conversion is not possible
+## dict -> string ###conversion is not possible
 dict1 = {'a': 123, 'b': 456}
 str1 = str(dict1)
 print(str1, type(str1), str1[0], str1[6])

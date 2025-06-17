@@ -205,9 +205,13 @@ t=5
 
 print ("simple interest: ", (P+(P/r)*t))
 
-# Question 20
+# Question 21
 print("_"*50)
 
 import datetime
 date = datetime.datetime.now()
 print(date)
+
+# Question 22
+print("_"*50)
+

@@ -118,12 +118,72 @@ for i in range(1, 6):
 print("-"*50)
 
 ##Q2: list of all the prime number from1 to 100 ##
-
+'''
 for num in range(2,101):
     for i in range(2, num):
         if num % i ==0:
            break
     else:
          print(num, end=" ")
+'''
+###########################
+
+print("-"*50)
+
+"""
+
+* * *       # i = 0
+    *   *   # i = 1
+* * * * *   # i = 2
+*   *       # i = 3
+    * * *   # i = 4
+    
+"""
+
+for i in range(5):
+    for j in range (6):
+        if i == 0 and j in (1,2,3):
+            print ("*", end = " ")
+        elif i == 1 and j in (3,5):
+            print("*", end=" ")
+        elif i == 2 and j in (1,2,3,4,5):
+            print("*", end=" ")
+        elif i == 3 and j in (1,3):
+            print("*", end=" ")
+        elif i == 4 and j in (3,4,5):
+            print("*", end=" ")
+        else:
+            print ( " ", end = " ")
+    print()
+#####################
+print("-"*50)
+
+##################
+'''
+*   * * *    # i = 0
+*   *        # i = 1
+* * * * *    # i = 2
+    *   *    # i = 3
+* * *   *    # i = 4
+
+'''
+for i in range(5):
+    for j in range (6):
+        if i == 0 and j in (1,3,4,5):
+            print ("*", end = " ")
+        elif i == 1 and j in (1,3):
+            print("*", end=" ")
+        elif i == 2 and j in (1,2,3,4,5):
+            print("*", end=" ")
+        elif i == 3 and j in (3,5):
+            print("*", end=" ")
+        elif i == 4 and j in (1,2,3,5):
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+
+print("-"*50)
 
 

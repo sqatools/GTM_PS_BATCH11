@@ -185,3 +185,136 @@ for ch in strhm3:
         result += ch
 
 print(result)
+
+
+print("_" * 50)
+############################ String Methods ##############################
+
+#print(dir(str))
+
+"""
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+"""
+
+# upper() and lower() : This method convert str1 into upper case and lower cases
+str_md = "Hi my self rahul deo and i am working as senior QA"
+print("Upper case:", str_md.upper())
+
+print("_" * 50)
+str_md1 = "HI I HOPE YOU ARE DOING WELL"
+print("Lower case:", str_md1.lower())
+
+print("_" * 50)
+############################
+# isupper() and islower() :  These method check the given string is in upper or in lower case, it will return boolean output.
+str_md2 = "CHECK THIS IS IN UPPER CASE OR NOT"
+print("Is this in uppercase:", str_md2.isupper())
+
+str_md3 = "check this is in lower case or noT"
+print("Is this in lowercase:", str_md3.islower())
+
+print("_" * 50)
+############################
+# swapcase method : This method convert lower case char to upper case and upper case characters to lower case.
+str_md4 = "CONVERSION of the letter wiTH SHOWcase"
+print("swap the letters:", str_md4.swapcase())
+
+print("_" * 50)
+############################
+# capitalize method : This method change only first letter of string into upper and remaining into lower case
+str_md5 = "i WILL CAPItaliZE this SENtense"
+print("Capitalize the sentense:", str_md5.capitalize())
+
+print("_" * 50)
+############################
+# title() method : This method convert first letter of each word into capital case and rest into small
+str_md6 = "This method conveRT fIRST letter in to caps"
+print("Caps the first letter of each word:", str_md6.title())
+
+print("_" * 50)
+############################
+# istitle() method : This method check the given string follow the rules of title case method.
+str_md7 = "This method conveRT fIRST letter in to caps"
+print("Check istitle:", str_md7.istitle())
+
+print("_" * 50)
+############################
+# count() method : count method return the number of occurrences of char/substring in given string.
+str_md8 = "occurrence of the char"
+print("count of r:", str_md8.count("r"))
+
+print("_" * 50)
+# write a python to print the count of each character without repeatation.
+str9 = "Lets print the count of each character without repeatation of letter"
+temp=""
+for char in str9:
+    if char not in temp:
+        print(char , ":" , str9.count(char))
+        temp = temp + char
+    else:
+        continue
+
+
+print("_" * 50)
+# write a python program to check the given 2 string are anagram or not
+str10 = "Hello"
+str11 = "lpoeh"
+
+anagram = True
+if len(str10) != len(str11):
+    anagram = False
+for char in str10:
+    if str11.count(char) == str10.count(char):
+        continue
+    else:
+        anagram = False
+
+if anagram:
+    print("These are anagram strings:", str10,str11)
+else:
+    print("These are not anagram strings:", str10,str11)
+
+
+print("_" * 50)
+#################### second solution ######################
+str12 = "pythoncode"
+str13 = "cdeothpnyo"
+# sorted function :  This function sort the string in alphabetical order and return as list of characters.
+V1 = sorted(str12)
+V2 = sorted(str13)
+print(V1, V2)
+
+if V1 == V2:
+    print("This is anagram")
+
+else:
+    print("This is not anagram")
+
+
+print("_"*50)
+########################################################################
+# Q3 :  write a python program to get most simuntaneounly repeated character
+
+
+
+
+print("_"*50)
+########################################################################
+# Q3 :  write a python program to get count of each character from given without using count method.
+
+str14 = "Pythonprogram"
+result = {}
+
+for char in str14:
+    print(result)
+    if char not in result:
+        result[char] = 1
+    else:
+        result[char] += 1
+
+print("output:", result)
+
+
+
+

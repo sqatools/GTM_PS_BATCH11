@@ -307,7 +307,7 @@ print("Max repeated count :", max_rep_count)
 
 print("_"*50)
 ########################################################################
-# Q3 :  write a python program to get count of each character from given without using count method.
+# Q4 :  write a python program to get count of each character from given without using count method.
 
 str_w = "Programming"
 # output = {'P': 1, 'r': 2, 'o':1, 'g': 2, 'a': 1, 'm': 2, 'i': 1, 'n': 1}
@@ -323,3 +323,216 @@ for char in str_w: # P
 print("output :", result)
 # {'P': 1, 'r': 2, 'o': 1, 'g': 2, 'a': 1, 'm': 2, 'i': 1, 'n': 1}
 
+print("_"*50)
+##################################################################
+# index method() :  This method return the index position of given char/sub-string in the target string.
+
+str_A = "Learning Python P"
+# get index of existing char/substring
+print("index of P :", str_A.index('P')) # 9
+print("index of ing :", str_A.index('ing')) # 5
+
+# get index of non-existing char/substring
+# print("index of W :", str_A.index('W'))
+# ValueError: substring not found
+
+
+print("_"*50)
+##################################################################
+# find method() :  This method return the index position of char/substring if it is available
+#                   If char/substring is not available, then it will return -1
+
+str_B = "Learning Python P"
+print("find g in string :", str_B.find("g")) # 7
+print("find Q in string :", str_B.find("Q")) # -1
+
+
+
+print("_"*50)
+##################################################################
+# split() method :  This split the string with given delimeters and return and list of substring.
+
+str_C = "We are Learning Python"
+# split with space
+print(str_C.split(" ")) # ['We', 'are', 'Learning', 'Python']
+
+str_D = "Very,Good,Morning"
+# split with comma
+print(str_D.split(",")) # ['Very', 'Good', 'Morning']
+
+# split with special character
+str_E = "Sachin&is&Best&Indian&Cricketer"
+print(str_E.split("&")) # ['Sachin', 'is', 'Best', 'Indian', 'Cricketer']
+
+
+print("_"*50)
+##################################################################
+# replace() method :  This method replace the word1 with word2 from given string.
+
+str_F = "Sachin is Best Indian Cricketer, Sachin"
+print(str_F.replace("Sachin", "Virat"))
+# Virat is Best Indian Cricketer, Virat
+
+# This will replace first occurrence of Sachin with Akshay and Cricketer with Actor, second Sachin will remain same
+result = str_F.replace("Sachin", "Akshay", 1).replace('Cricketer', 'Actor')
+print("result :", result)
+# result : Akshay is Best Indian Actor, Sachin
+
+
+str_FF = "Sachin is Best Indian Sachin Cricketer, Sachin"
+result_FF = str_FF.replace("Sachin", "Akshay", 2).replace('Cricketer', 'Actor')
+print("result :", result_FF)
+# Akshay is Best Indian Akshay Actor, Sachin
+
+
+print("_"*50)
+##################################################################
+# strip() method : This method remove trailing spaces from givens string.
+#                   space which is available in the beggining and ending of the string called trailing spaces
+
+str_G = "   Python Programming   "
+print(str_G)
+
+# use strip method to remove trailing
+var1 = str_G.strip()
+print(var1)
+
+# lstrip() method :  This method will remove left side spaces.
+print(str_G.lstrip())
+
+
+# rstrip() method :  This method will remove right side spaces.
+print(str_G.rstrip())
+
+
+print("_"*50)
+##################################################################
+# join() method : join method help to connect each character of string with any delimeter or spacial character
+
+str_H = "Programming"
+result = "-".join(str_H)
+print(result) # P-r-o-g-r-a-m-m-i-n-g
+
+result2 = "|".join(str_H)
+print(result2) # P|r|o|g|r|a|m|m|i|n|g
+
+result3 = "^&^**^".join(str_H)
+print(result3) # P^&^**^r^&^**^o^&^**^g^&^**^r^&^**^a^&^**^m^&^**^m^&^**^i^&^**^n^&^**^g
+
+print("_"*50)
+##################################################################
+# isnumeric() method :  This method check given string contains only number
+
+v1 = "456788 67657"
+print(v1.isnumeric()) # False
+
+v2 = "7767676"
+print(v2.isnumeric()) # True
+
+v3 = "G7767676H"
+print(v3.isnumeric()) # False
+
+
+print("_"*50)
+##################################################################
+# isalnum() method :  This method check given contains only number or character
+p1 = "543534"
+print(p1.isalnum())# True
+
+p2 = "Hello"
+print(p2.isalnum()) # True
+
+p3 = "Python234"
+print(p3.isalnum()) # True
+
+p4 = "Programming 456"
+print(p4.isalnum()) # False
+
+
+print("_"*50)
+##################################################################
+# isalpha() method : This method only check for alphabates in the string.
+q1= "Hello"
+print(q1.isalpha()) # True
+
+q2 = "Python&%^"
+print(q2.isalpha()) # False
+
+
+print("_"*50)
+##################################################################
+#Q1 write a python program to get longest word in the given string.
+str_11 = "We Are Learning Python Programming and Its Fun"
+long_word = ''
+long_len = 0
+word_list = str_11.split()
+print(word_list)
+for word in word_list:
+    #print(word)
+    print(long_len, long_word)
+    if len(word) > long_len:
+        long_len = len(word)
+        long_word = word
+    else:
+        continue
+
+
+
+print("_"*50)
+print("longest word :", long_word, ", longest len :", long_len)
+# 11 Programming
+# longest word : Programming , longest len : 11
+
+##########################################################
+print("_"*50)
+#Q2 write a python program to get longest word in the given string.
+str_12 = "Learning Python Programming"
+#output = "gearninL nythoP grogramminP"
+output = ""
+word_list = str_12.split()
+for word in word_list:
+    new_word = f"{word[-1]}{word[1:-1]}{word[0]}"
+    print(new_word)
+    output = output + new_word + " "
+
+print("result :", output)
+# gearninL nythoP grogramminP
+
+
+##########################################################
+print("_"*50)
+#Q3 write a python to get combination of three characters from given string.
+str13 = "Programming"
+#output = ['Pro', 'rog', 'ogr', 'gra', 'ram', 'amm', 'mmi', 'min', 'ing']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+start = 0
+end = 3
+output = []
+for i in range(len(str13)):
+    temp = str13[start: end]
+    start += 1
+    end += 1
+    output.append(temp)
+    if end > len(str13):
+        break
+
+print("combination output :", output)
+# ['Pro', 'rog', 'ogr', 'gra', 'ram', 'amm', 'mmi', 'min', 'ing']

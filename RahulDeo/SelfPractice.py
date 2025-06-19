@@ -295,7 +295,7 @@ else:
 print("_"*50)
 ########################################################################
 # Q3 :  write a python program to get most simuntaneounly repeated character
-
+str14 = "HHllo WWWWWWWe areeee LLLLLLLLLearning Python"
 
 
 
@@ -303,10 +303,10 @@ print("_"*50)
 ########################################################################
 # Q3 :  write a python program to get count of each character from given without using count method.
 
-str14 = "Pythonprogram"
+str15 = "Pythonprogram"
 result = {}
 
-for char in str14:
+for char in str15:
     print(result)
     if char not in result:
         result[char] = 1

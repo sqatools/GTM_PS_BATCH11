@@ -505,24 +505,6 @@ print("_"*50)
 str13 = "Programming"
 #output = ['Pro', 'rog', 'ogr', 'gra', 'ram', 'amm', 'mmi', 'min', 'ing']
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 start = 0
 end = 3
 output = []

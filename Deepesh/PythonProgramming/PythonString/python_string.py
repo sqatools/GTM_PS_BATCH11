@@ -62,7 +62,7 @@ for i in range(str_len):
 
 print("_" * 50)
 ######################## +ve and -ve indexing of string ###########
-str_a = "Progamming"
+str_a = "Programming"
 """ 
  0   1  2  3  4  5   6  7  8  9  # +ve
  P   r  o  g  a  m   m  i  n  g
@@ -504,25 +504,6 @@ print("_"*50)
 #Q3 write a python to get combination of three characters from given string.
 str13 = "Programming"
 #output = ['Pro', 'rog', 'ogr', 'gra', 'ram', 'amm', 'mmi', 'min', 'ing']
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 start = 0
 end = 3
 output = []

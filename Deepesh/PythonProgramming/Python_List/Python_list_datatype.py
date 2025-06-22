@@ -150,3 +150,223 @@ print("list8 :", list8)
 
 print("_"*50)
 ############### insert method ########
+# insert() method :  This method help to insert data at specific index position.
+
+list9 = [5, 15, 17, 12, 'A', 'B']
+list9.insert(2, 100)
+print("list9:", list9) # [5, 15, 100, 17, 12, 'A', 'B']
+
+list9.insert(-1, 500)
+print("list9:", list9)
+# [5, 15, 100, 17, 12, 'A', 500, 'B']
+
+print("_"*50)
+############### list concatenation ########
+list9 = [5, 15, 17, 12, 'A', 'B']
+list10 = [10, 20, 30]
+
+result = list9 + list10
+print("result :", result)
+# [5, 15, 17, 12, 'A', 'B', 10, 20, 30]
+
+
+print("_"*50)
+############### list repeatation ########
+# when we multiply any number with the list, then it will repeat the list values that number of times.
+list11 = [5, 'A', 'B']
+result = list11*3
+print("result :", result)
+#result : [5, 'A', 'B', 5, 'A', 'B', 5, 'A', 'B']
+
+
+print("_"*50)
+############### Remove method ########
+# remove method : This method will remove any specific value from list, if value is reapted multiple times
+#                 then it will remove only first occurrence of given value.
+
+list12 = [5, 15, 17, 12, 5, 'A', 'B', 5]
+list12.remove(5)
+print("list12 :", list12)
+# list12 : [15, 17, 12, 5, 'A', 'B', 5]
+
+list13 = [5, 15, 17, 12, 5, 'A', 5, 'B', 5]
+
+for _ in range(4):
+    list13.remove(5)
+
+print("list13 :", list13)
+# [15, 17, 12, 'A', 'B']
+
+print("_"*50)
+############### pop method ########
+# pop method : This method will remove any specific value from list with the help of index position.
+#              default index position is -1,  pop method return removed value.
+
+list14 = [5, 15, 17, 12, 5, 'A', 'B', 5, 12, 5, 13]
+
+# remove value default index position -1
+v1 = list14.pop()
+print("removed value  :", v1)
+# removed value  : 13
+print("list14 :", list14)
+#list14 : [5, 15, 17, 12, 5, 'A', 'B', 5, 12, 5]
+
+
+
+# remove value from specific index position
+v2 = list14.pop(4)
+print("removed value  :", v2)
+# removed value  : 5
+print("list14 :", list14)
+# list14 : [5, 15, 17, 12, 'A', 'B', 5, 12, 5]
+
+
+print("_"*50)
+############### pop method ########
+# clear method : clear method remove all the data from list remain as empty list
+
+list15 = ['A', 'B', 5, 12, 5, 13]
+list15.clear()
+print("cleared value :", list15)
+# cleared value : []
+
+
+print("_"*50)
+############### del keyword #########
+# del keyword : del keyword remove entire variable from memory.
+list16 = ['A', 'B', 5, 12, 5, 13, 100, 500]
+del list16
+# print("list16 :", list16)
+# NameError: name 'list16' is not defined
+
+
+# remove specific number data from list with del keyword
+list17 = ['A', 'B', 'C', 5, 12, 34,  5, 13, 100, 500]
+del list17[3:7]  # remove : 5, 12, 34,  5
+print("list17 :", list17) #  ['A', 'B', 'C', 13, 100, 500]
+
+
+# ['A', 'B', 'C', 13, 100, 500] :  this is updated list
+del list17[:3]  # remove : 'A', 'B', 'C'
+print("list17 :", list17) # [13, 100, 500]
+
+
+
+print("_"*50)
+############### replace values in the list with slicing/indexing #########
+list18 = ['A', 'B', 'P', 'Q',  5, 12, 5, 13, 100, 500]
+
+# mention index position to remove value
+list18[2:4] = ['X', 'Y']
+print("list18 :", list18) # ['A', 'B', 'X', 'Y', 5, 12, 5, 13, 100, 500]
+
+
+#  ['A', 'B', 'X', 'Y', 5, 12, 5, 13, 100, 500] : updated list
+list18[1], list18[5], list18[-2] = 'Python', 'Programming', 'Language'
+print("list18 :", list18)
+# list18 : ['A', 'Python', 'X', 'Y', 5, 'Programming', 5, 13, 'Language', 500]
+
+
+
+print("_"*50)
+############### count method #########
+# count method:  This method return no of occurrences of any specific value in the list.
+list18 = ['A', 'B', ['P', 'Q'],  5, 12, 5, 13, 100, 500, 5, 100, ['P', 'Q'], 13, 13, 13]
+print("count of 5 :", list18.count(5))
+# count of 5 : 3
+
+print(list18.count(['P', 'Q'])) # 2
+
+for val in list18:
+    print(val, ":", list18.count(val))
+
+print("_"*50)
+for val in [5, 100, 13]:
+    print(val, ":", list18.count(val))
+
+"""
+5 : 3
+100 : 2
+13 : 4
+"""
+
+print("_"*50)
+############### index method #########
+# index method:  This method return index position of any particular value
+#                ->  if value is repeated multiple time, then it will return index of first occurrence
+list19 = ['A', 'B', ['P', 'Q'],  5, 12, 5, 13, 100, 500, 5, ['P', 'Q']]
+
+var1 = list19.index(['P', 'Q'])
+print("var1 :", var1) # var1 : 2
+
+var2 = list19[2].index('Q')
+print("var2:", var2) # var2: 1
+
+
+print("_"*50)
+############### sort method #########
+# sort method() :  This method sort the list in place and modify original list.
+#                  it can sort list value in ascending and descending order
+
+# sort in ascending order
+list20 = [5, 7, 1, 23, 5, 78]
+list20.sort()
+print("list20 :", list20)  # [1, 5, 5, 7, 23, 78]
+
+
+# sort in descending order
+list21 = [5, 7, 1, 23, 5, 78]
+list21.sort(reverse=True)
+print("list21 :", list21)  # [78, 23, 7, 5, 5, 1]
+
+
+print("_"*50)
+############### reverse method #########
+# reverse method() : This method will reverse list value and modify the original list
+
+list22 = [5, 7, 1, 23, 5, 78]
+list22.reverse()
+print("list22 :", list22)  # [78, 5, 23, 1, 7, 5]
+
+
+print("_"*50)
+############### reversed function #########
+# reversed function:  This function take list as input and return the reverse list value
+
+list23 = [100, 500, 5, 7, 1, 23, 5, 78]
+result = list(reversed(list23))
+print("reversed result :", result)
+# [78, 5, 23, 1, 7, 5, 500, 100]
+
+
+str1 = "Python"
+result2 = list(reversed(str1))
+print(result2) # ['n', 'o', 'h', 't', 'y', 'P']
+
+print("".join(result2))  # nohtyP
+
+
+print("_"*50)
+##################### Copy Method ################
+# shallow copy :  When we assign one listA to listB and modify the listB, so in case of shallow copy, we are just
+# passing the reference of one list data to another list, then changes will reflect in both the list.
+
+
+list_a = [100, 500, 5, 8]
+list_b = list_a
+list_b.append('P')
+list_b.append('Q')
+print("list_a :", list_a) # [100, 500, 5, 8, 'P', 'Q']
+print("list_b :", list_b) # [100, 500, 5, 8, 'P', 'Q']
+
+
+# Deep Copy : In case of deep copy if modify any list value, then changes will reflect in respective list only.
+
+list_X = [100, 500, 5, 8, 12, 34]
+list_Y = list_X.copy()
+list_Y.append('A')
+list_Y.append('B')
+list_X.append('P')
+
+print("list x :", list_X) # [100, 500, 5, 8, 12, 34, 'P']
+print("list y :", list_Y) # [100, 500, 5, 8, 12, 34, 'A', 'B']

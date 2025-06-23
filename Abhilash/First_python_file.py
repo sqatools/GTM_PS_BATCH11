@@ -126,7 +126,7 @@ for num in range(2,101):
     else:
          print(num, end=" ")
 '''
-###########################
+
 
 print("-"*50)
 
@@ -185,5 +185,7 @@ for i in range(5):
 
 
 print("-"*50)
+
+
 
 

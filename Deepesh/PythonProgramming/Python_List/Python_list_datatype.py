@@ -370,3 +370,113 @@ list_X.append('P')
 
 print("list x :", list_X) # [100, 500, 5, 8, 12, 34, 'P']
 print("list y :", list_Y) # [100, 500, 5, 8, 12, 34, 'A', 'B']
+
+print("_"*50)
+################### Get Max, Min, and Sum of all values #######
+list_P = [100, 500, 5, 8, 12, 34]
+
+print("Max value :", max(list_P))
+# Max value : 500
+
+print("Min value :", min(list_P))
+# Min value : 5
+
+print("Sum of values :", sum(list_P))
+# Sum of values : 659
+
+print("_"*50)
+#############################################
+
+print("Max of string :", max('helvo')) # v
+print("min of string :", min('Zhello')) # e
+# 65-90 A-z
+# 97-122 a-z
+
+#print("sum of string :", sum('hello')) #
+# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+
+print("_"*50)
+#############################################
+print("Max of dict :", max({'a': 123, 'b': 567})) #
+# Max of dict : b
+print("min of dict :", min({'a': 123, 'b': 567}))
+# min of dict : a
+
+print("sum of dict keys:", sum({10: 'Hello', 20: 'Python'}))
+# sum of dict keys : 30
+
+############################# List Comprehension #################
+# write a program to get square of each value in list and store in a list
+list1 = [5, 7, 10, 13, 9, 3]
+result1 = []
+
+for val in list1:
+    result1.append(val**2)
+
+print("result :", result1)
+# [25, 49, 100, 169, 81, 9]
+
+
+##################
+# solve above program with list comprehension
+result2 = [val**2 for val in list1]
+print("result2 :", result2)
+
+
+################################
+print("_"*50)
+# write a program to get square of even value in list and store in a list
+list1 = [4, 7, 10, 13, 9, 12]
+output = []
+for val in list1:
+    if val%2 == 0:
+        output.append(val**2)
+    else:
+        continue
+
+print("output :", output)
+
+####################
+# solve above program to list comprehension
+output2 = [val**2 for val in list1 if val%2 == 0]
+print("output2 :", output2)
+
+
+
+################################
+print("_"*50)
+#write a program to get below output
+list2 = [4, 7, 10, 13, 9, 12]
+#output = [(4, 'even'), (7, 'odd'), (10, 'even'), (13, 'odd'), (9, 'odd'), (12, 'even')]
+
+output = []
+for val in list2:
+    if val%2 ==0:
+        output.append((val, 'even'))
+    else:
+         output.append((val, 'odd'))
+
+print("output :", output)
+#  [(4, 'even'), (7, 'odd'), (10, 'even'), (13, 'odd'), (9, 'odd'), (12, 'even')]
+
+################################
+# solve above program with list comprehension
+output3 = [(val, 'even') if val%2 ==0 else (val, 'odd') for val in list2]
+print("output3 :", output3)
+# [(4, 'even'), (7, 'odd'), (10, 'even'), (13, 'odd'), (9, 'odd'), (12, 'even')]
+
+
+
+
+
+print("_"*50)
+################################
+# write a list comprehension program to generate below output
+list_a = ['a', 'b', 'c']
+list_b = ['P', 'Q']
+output = [('a', 'P'), ('a', 'Q'), ('b', 'P'), ('b', 'Q'), ('c', 'P'), ('c', 'Q')]
+
+output4 = [(x, y) for x in list_a for y in list_b]
+print("output :", output4)
+# [('a', 'P'), ('a', 'Q'), ('b', 'P'), ('b', 'Q'), ('c', 'P'), ('c', 'Q')]

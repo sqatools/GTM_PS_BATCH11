@@ -145,7 +145,7 @@ else:
 
 print("_"*50)
 ################################################
-# write a python program to demostrade the interview process
+# write a python program to demonstrate the interview process
 round1 = "fail"
 round2 = "pass"
 round3 = "fail"

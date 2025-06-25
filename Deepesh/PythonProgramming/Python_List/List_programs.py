@@ -96,6 +96,7 @@ print("output :", pos_list+neg_list)
 # [45, 67, 80, 4, 23, -3, -56, -4]
 
 
+print("_"*50)
 #########################################################
 # Home work
 # write a python program to calculate the bill amount and update the inventory
@@ -107,3 +108,22 @@ purchase_list = [10, 5, 10, 20]
 
 #up_inventory_list = [180, 145, 490, 280]
 total_bill = 0
+
+for i in range(len(item_list)):
+    item_name = item_list[i]
+    item_price = price_list[i]
+    item_purchased = purchase_list[i]
+    item_inventory = inventory_list[i]
+    item_bill = item_price*item_purchased
+    # update the inventory
+    inventory_list[i] = inventory_list[i] - item_purchased
+    total_bill = total_bill + item_bill
+    print(item_name, "|", item_price, "|", item_purchased, "|", item_bill)
+
+
+print("_"*50)
+print(total_bill)
+print("update inventory :", inventory_list)
+print("_"*50)
+
+

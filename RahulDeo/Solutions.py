@@ -215,3 +215,8 @@ print(date)
 # Question 22
 print("_"*50)
 
+from datetime import date
+date_1 = date(2025,6,5)
+date_2 = date(2025,6,17)
+result = (date_2 - date_1).days
+print("Number of Days between the given Dates are:", result)

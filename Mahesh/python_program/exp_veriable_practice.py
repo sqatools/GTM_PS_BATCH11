@@ -52,3 +52,26 @@ a, b = b, a
 print("value of a =",a)
 print("value of b = ", b)
 
+print("-"*50,)
+#################################
+
+a = 8
+b = 6
+
+lhs = (a+b)**2
+print("lhs", lhs)
+
+rhs = a**2 + b**2 - 2*a*b
+print("rhs",rhs)
+print(lhs == rhs)
+
+print("-"*50)
+
+c = 5
+d = 10
+
+lhs = (a-b)* (a+b)
+print("lhs",lhs)
+rhs = a**2 - b**2
+print("rhs",rhs)
+print(lhs==rhs)

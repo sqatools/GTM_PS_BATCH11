@@ -175,3 +175,102 @@ print("set_3 :", set_3) # {'c', 8, 10, 11, 'a', 12, 'b'}
 print("set_4 :", set_4) # {'c', 4, 6, 9, 'a', 'b'}
 
 
+print("_"*50)
+#######################
+# intersection method: This method return the common values between both sets.
+
+set_13 = {4, 6, 8, 9, 10, 11, 12}
+set_14 = {'a', 'b', 'c', 6, 9, 4}
+
+common_value = set_13.intersection(set_14)
+print("common value :", common_value) # {9, 4, 6}
+
+print("set_13 :", set_13)
+print("set_14 :", set_14)
+
+print("_"*50)
+#### intersection update:  This method will update any of the set with intersection output.
+
+set_13.intersection_update(set_14)
+print("set_13 :", set_13) # {9, 4, 6}
+print("set_14 :", set_14) # {4, 'c', 6, 9, 'a', 'b'}
+
+
+print("_"*50)
+#######################
+# isdisjoint: This method check the target set is completely different from other set or not.
+
+set_15 = {4, 6, 8, 9, 10, 11, 12}
+set_16 = {'a', 'b', 'c', 6, 9, 4}
+set_17 = {'P', 'Q', 'R'}
+
+# set_15 and set_16 has common values
+print(set_15.isdisjoint(set_16)) # False
+
+# set_15 and set_17 doesn't have common values
+print(set_15.isdisjoint(set_17)) # True
+
+
+
+print("_"*50)
+#######################
+# superset and subset method: superset is considered as parent set and subset is considered child set.
+
+set_18 = {4, 6, 8, 9, 10, 11, 12}
+set_19 = {6, 9, 4}
+set_20 = {'P', 'Q', 'R', 12, 11}
+
+print("set_18 is superset of set_19:", set_18.issuperset(set_19)) #  True
+print("set_18 is superset of set_20:", set_18.issuperset(set_20)) # False
+
+print("set_19 is subset of set_18 :", set_19.issubset(set_18)) #  True
+print("set_20 is subset of set_18 :", set_20.issubset(set_18)) # False
+
+
+print("_"*50)
+#######################
+# copy method:
+
+print("_"*50)
+# Shallow copy :  In shallow copy we pass reference of one set to another set. If we modify any set value, then changes
+# #                 will reflect in both the sets.
+set_A = {4, 6, 8, 20}
+set_B = set_A
+set_B.add(30)
+set_B.add(50)
+set_A.add(100)
+
+print("Set_A :", set_A) # {4, 100, 6, 8, 50, 20, 30}
+print("Set_B :", set_B) # {4, 100, 6, 8, 50, 20, 30}
+
+
+##############################################
+print("_"*50)
+# Deep copy :  In Deep copy we have use copy method and copy content from one set to another set. If we modify any set value, then changes
+#                 will reflect respective set only, not in both sets.
+
+set_P = {4, 6, 8}
+set_Q  = set_P.copy()
+set_Q.add(30)
+set_P.add(50)
+
+print("set_P :", set_P) # {8, 50, 4, 6}
+print("set_Q :", set_Q) # {8, 4, 6, 30}
+
+
+##############################################################
+#Q1 write a python program to remove duplicate from list.
+list1 = [54, 8, 12, 5, 7, 23, 67, 5, 8, 7]
+output1 = [54, 8, 12, 5, 7, 23, 67]
+
+#Q2 : write a python program to add all multiple repeated values.
+list2 = [5, 4, 6, 8, 2, 4, 6, 2, 5, 3, 4, 4]
+# Add all the duplicate values in the list
+output2 = [10, 16, 12, 8, 4, 3]
+
+
+#Q3 : write a python program to add all multiple repeated values.
+list3 = [[3, 4, 5, 3], [1, 3, 4, 1], [5, 7, 12, 7]]
+# Add all duplicate values in child list
+output3 = [[6, 4, 5], [2, 3, 4], [5, 14, 12]]
+

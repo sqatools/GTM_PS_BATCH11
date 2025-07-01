@@ -263,14 +263,51 @@ print("set_Q :", set_Q) # {8, 4, 6, 30}
 list1 = [54, 8, 12, 5, 7, 23, 67, 5, 8, 7]
 output1 = [54, 8, 12, 5, 7, 23, 67]
 
+print("_"*50)
 #Q2 : write a python program to add all multiple repeated values.
 list2 = [5, 4, 6, 8, 2, 4, 6, 2, 5, 3, 4, 4]
 # Add all the duplicate values in the list
 output2 = [10, 16, 12, 8, 4, 3]
+
+temp = []
+output = []
+for val in list2:
+    val_count = list2.count(val)
+    if val not in temp:
+        if val_count > 1:
+            output.append(val*val_count)
+            temp.append(val)
+        else:
+            output.append(val)
+            temp.append(val)
+
+print("solution :", output) # [10, 16, 12, 8, 4, 3]
 
 
 #Q3 : write a python program to add all multiple repeated values.
 list3 = [[3, 4, 5, 3], [1, 3, 4, 1], [5, 7, 12, 7]]
 # Add all duplicate values in child list
 output3 = [[6, 4, 5], [2, 3, 4], [5, 14, 12]]
+
+output = []
+
+for child_list in list3:
+    temp = []
+    r1 = []
+    for val in child_list:
+        val_cnt = child_list.count(val)
+        if val not in temp:
+            if val_cnt > 1:
+                r1.append(val*val_cnt)
+                temp.append(val)
+            else:
+                r1.append(val)
+                temp.append(val)
+    output.append(r1)
+
+
+print("solution 2 :", output)
+# [[6, 4, 5], [2, 3, 4], [5, 14, 12]]
+
+
 

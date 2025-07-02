@@ -111,5 +111,5 @@ HelloHello
 """
 
 #Q1 . write a python function get max value list
-#Q2.  write a python fucntion get factorial of given number.
+#Q2.  write a python function get factorial of given number.
 #Q3.  write a python function get sum of all the values in the list.

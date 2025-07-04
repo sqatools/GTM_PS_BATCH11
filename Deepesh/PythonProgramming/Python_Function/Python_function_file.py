@@ -266,5 +266,82 @@ print("division :", c) # division : 8
 
 
 # Q1 : write a python function to check given number is prime or not return True or False value.
-# Q2 :  write a python function to get fabonacci serise till 10 values return as list
+# Q2 : write a python function to get fabonacci serise till 10 values return as list
 # Q3 : Write a python function to check given string in palindrome or not, return output as True or False
+
+
+def get_prime_number(num):
+    """
+    Prime :  The number that divide by 1 or itself is called prime number
+
+    :param num:
+    :return:
+    """
+    prime = True
+    for i in range(2, num): # (2, 15)
+        if num%i == 0:
+            prime = False
+            break
+        else:
+            continue
+
+    return prime
+
+print("_"*50)
+print(get_prime_number(11)) # True
+print("_"*50)
+print(get_prime_number(15)) # False
+
+
+
+
+# Q2 : write a python function to get fabonacci serise till 10 values return as list
+
+def get_fabonacci_series(num=10):
+    """
+    a  b   a   b
+    0, 1,  1,  2, 3, 5, 8, 13, 21, 34
+       a   b   a  b
+    a = b
+    b = a+b
+
+    :param num:
+    :return:
+    """
+    a = 0
+    b = 1
+    print(a, b, end=' ')
+    for _ in range(num):
+        a, b = b, a+b
+        # a= 1, b = 0+1 =1
+        # a = 1,b = 1+1 = 2
+        # a = 2,b = 1+2 = 3
+        # a = 3, b= 2+3 = 5
+        # a = 5, b= 5+3 = 8
+        # a = 8, b =8+5 = 13
+        print(b, end=' ')
+
+
+get_fabonacci_series()
+# 0 1 1 2 3 5 8 13 21 34 55 89
+
+
+# Q3 : Write a python function to check given string in palindrome or not, return output as True or False
+
+def check_String_palindrome(str1):
+    """
+    This function will check the given string is palindrome or not
+    and return output as True or False
+    :param str1:
+    :return:
+    """
+    if str1 == str1[::-1]:
+        return True
+    else:
+        return False
+
+
+print()
+print("_"*50)
+print(check_String_palindrome("Python")) # False
+print(check_String_palindrome("HellolleH")) # True

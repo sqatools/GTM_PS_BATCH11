@@ -62,3 +62,13 @@ def read_all_row_colums_values(file_path, sheet_name):
 
 #read_all_row_colums_values("users_data.xlsx", sheet_name='Sheet3')
 
+
+def write_content_to_excel(file_path, sheet_name, cell_name, value):
+    wb = openpyxl.load_workbook(file_path)
+    sheet = wb[sheet_name]
+    cell = sheet[cell_name]
+    cell.value = value
+    wb.save(file_path)
+
+#write_content_to_excel("users_data.xlsx", "Sheet4", "A1", 8098908678)
+write_content_to_excel("users_data.xlsx", "Sheet1", "A1", "We are learning Python")

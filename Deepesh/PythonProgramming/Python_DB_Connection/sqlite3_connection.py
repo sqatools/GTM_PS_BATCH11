@@ -1,3 +1,9 @@
+"""
+link to download database browser
+https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.13.1/DB.Browser.for.SQLite-v3.13.1-win32.msi
+
+"""
+
 import sqlite3
 from faker import Faker
 

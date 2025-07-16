@@ -120,7 +120,7 @@ read_no_lines("read_data.txt", 5)
 # readlines:  This method return list of lines from target file.
 
 
-def read_list_of_lines(file_path, start=0, end=1):
+def read_list_of_lines_with_range(file_path, start=0, end=1):
     with open(file_path, "r") as file:
         # readlines method return list of lines
         lines_list = file.readlines()

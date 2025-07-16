@@ -12,6 +12,7 @@ method: When we write a function inside the class, then it is called method.
 
 
           2.  class method: when we define method with decorator @classmethod, then it is called class method.
+
                         @classmethod
              Example:   def show_city_name_class(cls):
                              print("city name :", cls.city)
@@ -21,6 +22,7 @@ method: When we write a function inside the class, then it is called method.
                                then it is called static method
                                ->  static methods are directly associated with class, no need to create object of the class
                                    to access the static method.
+
                          @staticmethod
             Example:     def print_table(num):
                              for i in range(1, 11):

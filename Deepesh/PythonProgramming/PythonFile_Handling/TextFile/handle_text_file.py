@@ -106,7 +106,7 @@ def read_no_lines(file_path, no_of_lines):
             data = file.readline()
             print(data, end="")
 
-#read_no_lines("read_data.txt", 5)
+read_no_lines("read_data.txt", 5)
 
 """
 1. When I started playing for SA, I was nowhere near good enough.

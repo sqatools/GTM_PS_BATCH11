@@ -90,6 +90,7 @@ class ABC:
         print("Addition of v1, v2:", self.v1 + self.v2)
 
     def show_city_name(self):
+        self.greeting()
         print("city name :", self.city)
         self.city = "Pune"
 
@@ -116,6 +117,8 @@ obj.addition(40, 50)
 #                 when we call any method with the help of object of the class,
 #                 then object of the class is first parameter to the method internally.
 #                 no need to specify object value as parameter while calling the method.
+
+#   Note : We can access any method or variable inside the instance method with the help of self variable.
 
 # obj.greeting()
 # if we are calling the method with class name, then we have to provide object as self parameter value.

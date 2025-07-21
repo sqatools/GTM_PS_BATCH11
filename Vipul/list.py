@@ -3,4 +3,3 @@ l.append([14, 56])
 # l.extend([15, 17, 12])
 
 print(l)
-

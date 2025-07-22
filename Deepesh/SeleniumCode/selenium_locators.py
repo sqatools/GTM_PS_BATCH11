@@ -56,8 +56,11 @@ class SeleniumLocators:
         time.sleep(5)
         # get element with tagname locator
         all_images = self.driver.find_elements(By.TAG_NAME, "img")
+
+        # iterate through the element and perform operation.
         for image in all_images:
             print(image.get_attribute("alt"))
+            #image.click()
 
         time.sleep(5)
         self.driver.close()

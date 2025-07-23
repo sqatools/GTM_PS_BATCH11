@@ -1,0 +1,1 @@
+{"username": "Rahul", "email": "Rahul@gmail.com", "phone": 7897987987, "address": "Mumbai, Boriwali", "city": "Mumbai", "browser": "Chrome", "url": "https://www.facebook.com", "password": "user@12345"}

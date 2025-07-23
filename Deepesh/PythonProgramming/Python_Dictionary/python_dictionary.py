@@ -241,3 +241,130 @@ print("dict_f :", dict_f) # {'a': 234, 'b': 567, 'c': 890, 'p': 222}
 var2 = dict_f.popitem()
 print("removed data :", var2)  # ('p', 222)
 print("dict_f :", dict_f) # {'a': 234, 'b': 567, 'c': 890}
+
+
+print("_"*50)
+#################################
+# clear() method :  This method clear all the data from dict and remain a empty dict
+dict_g = {'a': 234, 'b': 567, 'c': 890, 'p': 222, 'q': 678}
+
+dict_g.clear()
+
+print("dict_g :", dict_g)
+# dict_g : {}
+
+
+print("_"*50)
+#################################
+# remove data with del keyword
+dict_h = {'a': 234, 'b': 567, 'c': 890, 'p': 222, 'q': 678}
+
+del dict_h
+#print("dict_h :", dict_h)
+# NameError: name 'dict_h' is not defined
+
+
+dict_j = {'a': 234, 'b': 567, 'c': 890, 'p': 222, 'q': 678}
+del dict_j['p']
+
+print("dict_j:", dict_j)
+# {'a': 234, 'b': 567, 'c': 890, 'q': 678}
+
+
+print("_"*50)
+#################################
+# set default method:
+dict_k = {'a': 234, 'b': 567, 'c': 890, 'p': 222, 'q': 678}
+# set default value for existing key : if key is already available then it will return existing value of
+# the key.
+result = dict_k.setdefault("b", 600)
+print("value of b :", result)
+# value of b : 567
+
+
+# set default value for not existing key : It will return new default value as result and update the dict with
+# new key value pair.
+result2 = dict_k.setdefault("W", 600)
+print("value of w :", result2)
+# value of w : 600
+print("dict_k :", dict_k)
+# dict_k : {'a': 234, 'b': 567, 'c': 890, 'p': 222, 'q': 678, 'W': 600}
+
+
+
+print("_"*50)
+#################################
+# fromkeys: It will create a dictionary with the help of list of data as key and assign one single value to
+# all the keys
+
+list1 = ['a', 'b', 'c']
+result = dict.fromkeys(list1, 200)
+print("fromkeys result :", result)
+# {'a': 200, 'b': 200, 'c': 200}
+
+
+print("_"*50)
+#################################
+# copy method:
+# 1. shallow copy concept: in shallow copy if assign one dict to another and modify any of the dict
+# then changes will reflect in both the dictionaries.
+
+dict1 = {'P': 345, 'Q': 789}
+dict2 = dict1
+dict2['R']= 700
+dict2['S'] = 500
+print("dict2 :", dict2) # {'P': 345, 'Q': 789, 'R': 700, 'S': 500}
+print("dict1 :", dict1) # {'P': 345, 'Q': 789, 'R': 700, 'S': 500}
+
+
+# 1. Deep copy concept: in deep copy if copy one dict to another and modify any of the dict
+# then changes will reflect in that dictionary only.
+
+dict_a = {'X': 666, 'Y': 777}
+dict_b = dict_a.copy()
+dict_b['Z'] = 888
+print("dict_b :", dict_b) # {'X': 666, 'Y': 777, 'Z': 888}
+print("dict_a :", dict_a) # {'X': 666, 'Y': 777}
+
+
+print("_"*50)
+######################## Dict comprehension #############
+str1 = "Hello we are Learning Python"
+result = {word: len(word)  for word in str1.split()}
+print(result)
+
+# {'Hello': 5, 'we': 2, 'are': 3, 'Learning': 8, 'Python': 6}
+
+print("_"*50)
+##################### Dict comprehension with if condition ##############
+# Get dict of data where the length word is greater than 5
+
+result2 = {word:len(word) for word in str1.split() if len(word) >= 5}
+print(result2)
+# {'Hello': 5, 'Learning': 8, 'Python': 6}
+
+
+print("_"*50)
+##################################### Sorting of dictionary ##################
+dict_test =  {'apple': 1, 'mango': 5, 'banana': 3, 'watermelon': 2}
+
+# sorting of dictionary on the basis of keys
+result = dict(sorted(dict_test.items()))
+print(result)
+# {'apple': 1, 'banana': 3, 'mango': 5, 'watermelon': 2}
+
+print("_"*50)
+#################################################
+# sorting of dictionary on basis of values
+
+print(dict_test.items())
+result2=  dict(sorted(dict_test.items(), key= lambda item: item[1]))
+print("result2 :", result2)
+# result2 : {'apple': 1, 'watermelon': 2, 'banana': 3, 'mango': 5}
+
+
+val = lambda x: x**2
+print(val(3))
+
+
+

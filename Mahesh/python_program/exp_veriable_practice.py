@@ -75,16 +75,7 @@ print("lhs",lhs)
 rhs = a**2 - b**2
 print("rhs",rhs)
 print(lhs==rhs)
-
-print("-"*50)
-"""
-"""""
-*       * * * * *
-*       *
-*       *
-* * * * * * * * *
-        *       *
-        *       *
+00
 * * * * *       *
 
 
@@ -113,3 +104,14 @@ for i in range (len(item_list)):
     available_stock = inventory_list[i]
     price = price_list
 """
+
+# write a python program to remove duplicate from list.
+list1 = [54, 8, 12, 5, 7, 23, 67, 5, 8,7]
+
+list2 = []
+
+for item in list1:
+    if item not in list2:
+        list2.append(item)
+print("removed duplicated values = ",list2)
+

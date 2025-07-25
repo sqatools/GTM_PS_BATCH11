@@ -38,8 +38,33 @@ There are two types of xpath
                     e.g. //tagname[@attri1='value' and @attrib2='value']
                     ->  //input[@type='text' or @type='password']
 
-4. starts-with
+4. starts-with :  This method look for prefix value of attribute or text.
+                    e.g.  //tagname[starts-with(@attribute, 'starting value')]
+                    ->    //input[starts-with(@placeholder, "Email")]
+                    ->    //a[starts-with(text(), 'Create new')]
 
-5. ends-with
+5. normalise-space : This method normal trailing spaces from target element, it means space at begining and ending of the value.
+                     e.g.  //tagname[normalize-space(@attribute)='value']
+                     -> //h2[normalize-space(text())='Travel Details']
+                     -> //h3[normalize-space(text())='Dummy Website']
+                     -> //a[normalize-space(@data-testid)='open-registration-form-button']
 
-6. normalise-space
+
+##################### Advance XPath Method #########################
+1. parent : with this parent method we can identify any parent element with the help of reference of child element
+            e.g.   ref_tag[@attrib='value']//parent::tar_tag[@attribute='value']
+            ->     //td[text()='Mumbai']//parent::tr[@bgcolor='lightgrey']
+            ->     //td[text()='6007']//parent::tr[@bgcolor='lightgrey']//input
+            ->     //td[text()='Equity']//parent::tr/td[2]
+
+
+2. ancestor :  This method will identify the acenstor element with the help of child element:
+               e.g.   ref_tag[@attrib='value']//parent::tar_tag[@attribute='value']
+                     -> //td[text()='6001']//ancestor::table
+                     -> //input[@value='radio_345']//ancestor::ul//input[@value='radio_558']
+
+
+3. following :
+4. following-sibling:
+5. preceding:
+6. preceding-sibling:

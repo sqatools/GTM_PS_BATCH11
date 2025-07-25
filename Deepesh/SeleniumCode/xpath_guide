@@ -1,0 +1,45 @@
+There are two types of xpath
+1. Absolute XPath: Absolute xpath follows the entire path of DOM structure to locate any element.
+      e.g. /html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input
+      # Note :  absolute xpath is not recommended to user, because it is very unstable.
+
+2. Relative XPath: Relative xpath find the element with the help element attribute.
+        e.g   //tagname[@attribute='value']     or    //*[@attribute='value']
+        ->    //input[@type='text']               or    //*[@type='text']
+        ->    //input[@data-testid="royal-email"]  or    //*[@data-testid="royal-email"]
+
+
+        # If multiple element are matching with same attribute then we can user index
+          e.g :  (//input[@id='firstname'])[1]
+
+
+# Basic XPath Methods:
+
+1. text() method:  we can find the element with the help text of any element visible.
+                   e.g. //tagname[text()='text value']     or  //*[text()='text value']
+                     -> //a[text()='Create new account']   or  //*[text()='Create new account']
+                     -> //a[text()='Create a Page']        or  //*[text()='Create a Page']
+                     -> //button[text()='Log in']          or  //*[text()='Log in']
+
+2. contains() method: contains method find the element with the help of partial value of text or partial attribute
+                      value.
+                    e.g.  //tagname[contains(@attrib, 'partial value')]
+                     ->   //input[contains(@placeholder, 'Email address')]
+                     ->   //button[contains(@data-testid, 'royal-login')]
+
+                    e.g. //tagname[contains(text(), 'partial text')]
+                    ->   //h2[contains(text(), 'Facebook helps')]
+                    ->   //a[contains(text(), 'Create new')]
+
+3. logical condition with and/or :   we can find the element with the help of and/or logical condition
+                    e.g. //tagname[@attri1='value' and @attrib2='value']
+                    ->   //input[contains(@data-testid, 'royal') and @placeholder='Email address or phone number']
+
+                    e.g. //tagname[@attri1='value' and @attrib2='value']
+                    ->  //input[@type='text' or @type='password']
+
+4. starts-with
+
+5. ends-with
+
+6. normalise-space

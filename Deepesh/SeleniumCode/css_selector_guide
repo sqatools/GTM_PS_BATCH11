@@ -1,0 +1,22 @@
+CSS Selectors Methods
+1.  ID :  We we want to write a CSS selector with ID, then we have to add # as prefix
+         ->  #email, #pass, #billing_email
+2.  class : We we want to write a CSS selector with class, then we have to add do (.) as prefix
+            before class name.
+         ->  .oxd-button.orangehrm-left-space
+         -> button.oxd-button.orangehrm-left-space
+         -> div>button.oxd-button.orangehrm-left-space
+
+3.  attribute :  e.g. tagname[attribute='value']
+                 -> input[placeholder="Email address or phone number"]
+                 -> [placeholder="Email address or phone number"]
+                 -> button[data-testid="royal-login-button"]
+
+4.  start-with :  e.g. tagname[attribute^='value'] : This will look starting value of attribute
+                  -> button[data-testid^="royal-login"]
+                  -> button[data-testid^="royal"]
+                  -> [data-testid^="royal-l"]
+
+5.  ends-with : e.g. tagname[attribute$='value'] : This will look ending value of attribute
+                  -> button[data-testid$="login-button"]
+                  -> input[id$='email']

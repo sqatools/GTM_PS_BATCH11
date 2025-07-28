@@ -59,12 +59,30 @@ There are two types of xpath
 
 
 2. ancestor :  This method will identify the acenstor element with the help of child element:
-               e.g.   ref_tag[@attrib='value']//parent::tar_tag[@attribute='value']
-                     -> //td[text()='6001']//ancestor::table
-                     -> //input[@value='radio_345']//ancestor::ul//input[@value='radio_558']
+            e.g.   ref_tag[@attrib='value']//parent::tar_tag[@attribute='value']
+                -> //td[text()='6001']//ancestor::table
+                -> //input[@value='radio_345']//ancestor::ul//input[@value='radio_558']
 
 
-3. following :
-4. following-sibling:
-5. preceding:
-6. preceding-sibling:
+3. following :  Following method look for all the element available below side on reference element on
+                the web page.
+             e.g. ref_tag[@attrib='value']//following::tar_tag[@attribute='value']
+             ->   //button[contains(., 'Add')]//following::p[text()='OrangeHRM OS 5.7']
+             ->   //input[@id='billing_email']//following::input[@id='street_address1']
+
+4. following-sibling: Following method look for all the element available below side of reference element on
+                the web page under same parent element.
+               e.g. ref_tag[@attrib='value']//following-sibling::tar_tag[@attribute='value']
+               ->   //td[text()='6003']//following-sibling::td[text()='Indore']
+               -> //div[text()='Jobinsam@6742']//parent::div//following-sibling::div//button/i[contains(@class, 'bi-trash')]
+
+5. preceding:  Following method look for all the element available upper side on reference element on
+                the web page.
+                e.g. ref_tag[@attrib='value']//preceding::tar_tag[@attribute='value']
+                -> //td[text()='Indore']//preceding::input[@id='billing_phone']
+
+
+6. preceding-sibling: Following method look for all the element available upper side of reference element on
+                the web page under same parent element.
+               ->  ref_tag[@attrib='value']//preceding-sibling::tar_tag[@attribute='value']
+               -> //td[text()='Indore']//preceding-sibling::td/input

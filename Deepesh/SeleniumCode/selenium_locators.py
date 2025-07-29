@@ -46,6 +46,10 @@ class SeleniumLocators:
 
         time.sleep(5)
 
+        self.driver.find_element(By.XPATH, "//a[@role='button']/div/div").click()
+        time.sleep(10)
+
+
         # get element with link_text locator
         self.driver.find_element(By.LINK_TEXT, "Create new account").click()
 

@@ -6,8 +6,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
 
-
-
 class SeleniumWaits:
     """
     1). implicit wait:  ->  Implicit wait by default applies on all the web elements.

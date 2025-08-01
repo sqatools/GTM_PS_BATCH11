@@ -19,10 +19,17 @@ class HandleAlerts:
         element = self.wait.until(cond(locator))
         return element
 
+    def click_element(self, locator):
+        self.get_element(locator).click()
+
+    def get_text(self, locator):
+        return self.get_element(locator).text
+
     def handle_alert_box(self):
         self.driver.get("https://automationbysqatools.blogspot.com/2020/08/alerts.html")
 
-        self.get_element(locator=(By.ID, "btnShowMsg")).click()
+        #self.get_element(locator=(By.ID, "btnShowMsg")).click()
+        self.click_element(locator=(By.ID, "btnShowMsg"))
         print("alert msg  :", self.alert.text)
         time.sleep(5)
 

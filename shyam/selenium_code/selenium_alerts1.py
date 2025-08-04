@@ -63,3 +63,12 @@ obj=Handle_alert()
 obj.handle_alert_prompt_box()
 
 
+# Home work:
+# repeat :  Handle Iframe, Handle Droddown, Handle Alerts
+# Automate 5 areas of openhrm website in class format
+# https://opensource-demo.orangehrmlive.com/web/index.php
+# Admin
+# Leave
+# PIM
+# Time
+# Recruitment

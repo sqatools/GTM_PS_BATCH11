@@ -222,7 +222,7 @@ print("list14 :", list14)
 
 
 print("_"*50)
-############### pop method ########
+############### clear method ########
 # clear method : clear method remove all the data from list remain as empty list
 
 list15 = ['A', 'B', 5, 12, 5, 13]

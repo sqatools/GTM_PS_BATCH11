@@ -35,7 +35,7 @@ class HandleBrowserTabs:
         self.driver.switch_to.window(windows_list[1])
 
         # get list of headings in the new page
-        headings_list = self.get_element(locator=(By.XPATH, "//div[contains(@class, 'post-body')]//h3"), cond=ec.presence_of_all_elements_located)
+        headings_list = self.get_element(locator=(By.XPATH, "//div[contains(@class, 'post-body')]//h3"),cond=ec.presence_of_all_elements_located)
         for heading in headings_list:
             print(heading.text)
 

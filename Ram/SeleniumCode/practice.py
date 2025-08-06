@@ -2,6 +2,7 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
@@ -16,15 +17,50 @@ class FacebookLogin:
         element = self.wait.until(condition(locator))
         return element
 
-    def element_click(self, locator):
-        self.get_element(locator).click()
+    def element_click(self, locator, **kwargs):
+        self.get_element(locator, **kwargs).click()
 
     def facebook_login(self):
         self.driver.get("https://www.facebook.com/")
         self.get_element(locator=(By.NAME, "email")).send_keys("user@gmail.com")
         self.get_element(locator=(By.NAME, "pass")).send_keys("User@123")
+        self.element_click(locator=(By.NAME, "login"), condition=ec.element_to_be_clickable)
+        time.sleep(2)
+        self.driver.back()
+        time.sleep(2)
+        self.element_click(locator=(By.LINK_TEXT, "Create new account"), condition=ec.element_to_be_clickable)
+        time.sleep(2)
+        self.get_element(locator=(By.NAME, "firstname")).send_keys("ram")
+        self.get_element(locator=(By.NAME, "lastname")).send_keys("123")
+        time.sleep(2)
+        click_dropdown = self.get_element(locator=(By.NAME, "birthday_day"))
+        select_day = Select(click_dropdown)
+        select_day.select_by_visible_text("10")
+        click_dropdown1 = self.get_element(locator=(By.NAME, "birthday_month"))
+        select_month = Select(click_dropdown1)
+        select_month.select_by_visible_text("Dec")
+        click_dropdown2 = self.get_element(locator=(By.NAME, "birthday_year"))
+        select_year = Select(click_dropdown2)
+        select_year.select_by_visible_text("2020")
+        time.sleep(2)
+        self.element_click(locator=(By.XPATH, "//input[@type='radio' and @value='-1']"))
+        value1 = -1
+        if value1 == -1:
+            click_dropdown3 = self.get_element(locator=(By.XPATH, "//select[@id='preferred_pronoun']"))
+            select_pronoun = Select(click_dropdown3)
+            select_pronoun.select_by_index(2)
+            self.get_element(locator=(By.NAME, "custom_gender")).send_keys("Male")
+        else:
+            print("Not Selecting")
+
+        time.sleep(2)
+        self.get_element(locator=(By.NAME, "reg_email__")).send_keys("user1@gmail.com")
+        self.get_element(locator=(By.NAME, "reg_passwd__")).send_keys("user123")
+        time.sleep(2)
+        self.element_click(locator=(By.NAME, "websubmit"), condition=ec.element_to_be_clickable)
         time.sleep(3)
-        self.element_click(locator=(By.LINK_TEXT, "Create new account"))
+        self.driver.back()
+        #self.element_click(locator=(By.XPATH, "//a[text()='Forgotten password?']"))
         time.sleep(3)
 
 

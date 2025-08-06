@@ -98,10 +98,10 @@ class HandleDropdownValues:
 
 
 obj = HandleDropdownValues()
-#obj.select_dropdown_value_by_text()
+obj.select_dropdown_value_by_text()
 #obj.select_dropdown_by_value()
 #obj.select_dropdown_by_indexing()
 #obj.select_dynamic_values()
-obj.select_dynamic_values_updated()
+#obj.select_dynamic_values_updated()
 
 

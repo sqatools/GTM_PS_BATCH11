@@ -24,8 +24,6 @@ class Classwork:
 
     def get_text(self, locator):
         return self.get_element(locator).text
-        sleep(3)
-
 
     def login(self):
         self.driver.get("https://www.facebook.com/")

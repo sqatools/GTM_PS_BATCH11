@@ -29,7 +29,11 @@ class HandleDropdownValues:
         return select_obj
 
     def click_element(self, locator, **kwargs):
-        self.get_element(locator=locator, **kwargs).click()
+        try:
+            self.get_element(locator=locator, **kwargs).click()
+        except Exception as e:
+            print(e)
+            self.driver.save_screenshot("element_not_found.png")
 
     def enter_text(self, locator, value, **kwargs):
         self.get_element(locator=locator, **kwargs).send_keys(value)
@@ -95,6 +99,53 @@ class HandleDropdownValues:
         self.click_element(LeaveLocator.leave_type_value, cond=ec.element_to_be_clickable)
         time.sleep(10)
 
+    def select_flight_booking_location(self):
+        self.driver.get("https://www.goibibo.com/")
+
+        self.click_element(locator=(By.XPATH, "//span[@class='logSprite icClose']"), cond=ec.element_to_be_clickable)
+
+        # Select source city
+        self.click_element(locator=(By.XPATH, "//span[text()='From']//following-sibling::p"))
+        self.enter_text(locator=(By.XPATH, "//span[text()='From']//following-sibling::input"), value="Mumbai")
+        self.click_element(locator=(By.XPATH, "//span[text()='Mumbai, India']"))
+
+        # select target city
+        self.enter_text(locator=(By.XPATH, "//span[text()='To']//following-sibling::input"), value="Chennai")
+        self.click_element(locator=(By.XPATH, "//span[text()='Chennai, India']"))
+
+        # select departure date
+        self.click_element(locator=(By.XPATH, "//span[text()='Departure']//parent::div"))
+        self.click_element(locator=(By.XPATH, "//div[contains(@aria-label,'Aug 08 2025')]"))
+
+        # select return date
+        self.click_element(locator=(By.XPATH, "//span[text()='Return']//parent::div"))
+        self.click_element(locator=(By.XPATH, "//div[contains(@aria-label,'Aug 10 2025')]"), cond=ec.element_to_be_clickable)
+
+        # enter travellers details
+        self.click_element(locator=(By.XPATH, "//span[contains(text(), 'Traveller')]//parent::div"))
+
+        # Add adults
+        for _ in range(2):
+            self.click_element(locator=(By.XPATH, "//p[text()='Adults']//parent::div//span[3]"))
+
+        # Add Children
+        for _ in range(2):
+            self.click_element(locator=(By.XPATH, "//p[text()='Children']//parent::div//span[3]"))
+
+        # Add Children
+        for _ in range(2):
+            self.click_element(locator=(By.XPATH, "//p[text()='Infants']//parent::div//span[3]"))
+
+        self.click_element(locator=(By.XPATH, "//li[text()='premium economy']"))
+        time.sleep(3)
+        self.click_element(locator=(By.XPATH, "//a[text()='Done']"))
+
+        time.sleep(3)
+        self.click_element(locator=(By.XPATH, "//span[text()='SEARCH FLIGHTS']"))
+
+
+        time.sleep(15)
+
 
 
 obj = HandleDropdownValues()
@@ -102,6 +153,11 @@ obj = HandleDropdownValues()
 #obj.select_dropdown_by_value()
 #obj.select_dropdown_by_indexing()
 #obj.select_dynamic_values()
-obj.select_dynamic_values_updated()
+#obj.select_dynamic_values_updated()
+obj.select_flight_booking_location()
+
+
+# Home work : automate bus booking
+# https://www.goibibo.com/bus/
 
 

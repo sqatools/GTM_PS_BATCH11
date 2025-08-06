@@ -1,6 +1,4 @@
 import time
-from tkinter.tix import Select
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -27,6 +25,12 @@ class Classwork:
     def get_text(self, locator):
         return self.get_element(locator).text
 
+    def select_dropdown_value(self, locator):
+        element = self.get_element(locator=locator)
+        return Select(element)
+
+
+
     def login(self):
         self.driver.get("https://www.facebook.com/")
         username_element = self.get_element(locator=(By.ID,'email'))
@@ -47,15 +51,20 @@ class Classwork:
         last_name_element = self.get_element(locator=(By.XPATH,"//input[@name='lastname']"))
         last_name_element.send_keys("automation")
         time.sleep(2)
-        day_dropdown = self.get_element(locator=(By.ID,'day'))
-        select_obj = Select(day_dropdown)
-        select_obj.select_by_value("19")
-        month_dropdown = self.get_element(locator=(By.ID, 'month'))
-        select_obj = Select(month_dropdown)
-        select_obj.select_by_index(7)
-        year_dropdown = self.get_element(locator=(By.ID, 'year'))
-        select_obj = Select(year_dropdown)
-        select_obj.select_by_visible_text('1995')
+        #day_dropdown = self.get_element(locator=(By.ID,'day'))
+        # select_obj = Select(day_dropdown)
+        # select_obj.select_by_value("19")
+        #month_dropdown = self.get_element(locator=(By.ID, 'month'))
+        # select_obj = Select(month_dropdown)
+        # select_obj.select_by_index(7)
+        # year_dropdown = self.get_element(locator=(By.ID, 'year'))
+        # select_obj = Select(year_dropdown)
+        # select_obj.select_by_visible_text('1995')
+
+        self.select_dropdown_value(locator=(By.ID,'day')).select_by_value("19")
+        self.select_dropdown_value(locator=(By.ID, 'month')).select_by_index(7)
+        self.select_dropdown_value(locator=(By.ID, 'year')).select_by_visible_text("1995")
+
         self.click_element(locator=(By.XPATH,"//span[@class='_5k_2 _5dba']//input[@value='2']"))
         email_element = self.get_element(locator=(By.XPATH, "//input[@name='reg_email__']"))
         email_element.send_keys("vipul12645@gmail.com")

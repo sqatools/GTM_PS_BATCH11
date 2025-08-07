@@ -106,7 +106,7 @@ class BusBooking(AutomationPractice):
         self.get_element(locator=(By.XPATH, "//input[@placeholder='Enter Email Address']")).send_keys("user@gmail.com")
         self.get_element(locator=(By.XPATH, "//input[@placeholder='Enter Mobile Number']")).send_keys("9876543211")
         time.sleep(2)
-        self.element_click(locator=(By.XPATH, "//span[contains(@class, 'sc-bfYoXt jZjBWY')]"))
+        self.element_click(locator=(By.XPATH, "//label[text()='Confirm and save billing details to your profile']"))
         self.element_click(locator=(By.XPATH, "//button[contains(@class, 'NewReviewstyle__PayButton')]"))
         time.sleep(8)
 

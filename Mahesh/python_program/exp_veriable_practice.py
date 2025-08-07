@@ -52,3 +52,66 @@ a, b = b, a
 print("value of a =",a)
 print("value of b = ", b)
 
+print("-"*50,)
+#################################
+
+a = 8
+b = 6
+
+lhs = (a+b)**2
+print("lhs", lhs)
+
+rhs = a**2 + b**2 - 2*a*b
+print("rhs",rhs)
+print(lhs == rhs)
+
+print("-"*50)
+
+c = 5
+d = 10
+
+lhs = (a-b)* (a+b)
+print("lhs",lhs)
+rhs = a**2 - b**2
+print("rhs",rhs)
+print(lhs==rhs)
+00
+* * * * *       *
+
+
+for i in range (7):
+    for j in range (9):
+        if i in [0,1,2,3,6]:
+            print("*", end=" ")
+        elif j in [0,4,5,6,7,8]:
+            print("*", end=" ")
+
+
+    print()
+"""
+item_list = ['Apple', 'Mango', 'Banana', 'Lichi']
+inventory_list = [200, 150, 500, 300]
+price_list = [100, 250, 50, 80]
+purchase_list = [10, 5, 10, 20]
+total_bill = 0
+
+#up_inventory_list = [180, 145, 490, 280]
+
+
+
+for i in range (len(item_list)):
+    item = item_list[i]
+    available_stock = inventory_list[i]
+    price = price_list
+"""
+
+# write a python program to remove duplicate from list.
+list1 = [54, 8, 12, 5, 7, 23, 67, 5, 8,7]
+
+list2 = []
+
+for item in list1:
+    if item not in list2:
+        list2.append(item)
+print("removed duplicated values = ",list2)
+

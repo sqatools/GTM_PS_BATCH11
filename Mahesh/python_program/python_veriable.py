@@ -33,3 +33,20 @@ rsh = a**2 - b**2
 print("rhs output :", rsh)
 
 print(lhs == rsh)
+
+print("-"*50)
+for i in range(5, 11):
+    for j in range(5, i-1):
+        print("*", end=" ")
+    print()
+
+print("-"*50)
+m =5
+for i in range(m, 0, -1):
+    print("* " * i)
+
+print("%"*50)
+for i in range(5, 11):
+    for j in range(5, i-1):
+        print("*", end=" ")
+    print()

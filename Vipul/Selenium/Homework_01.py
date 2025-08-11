@@ -64,13 +64,13 @@ class Homework:
         self.click_element(locator=(By.XPATH,'(//div[@class="billing-input-container"])[3]'))
         self.click_element(locator=(By.XPATH,'//li[text()="Uttarakhand"]'))
         time.sleep(2)
-        self.get_element(locator=(By.XPATH,"//input[@id='confirm_check']")).click()
-        # self.click_element(locator=(By.XPATH,"//input[@id='confirm_check']"))
+        #self.get_element(locator=(By.XPATH,"//input[@id='confirm_check']")).click()
+        self.click_element(locator=(By.XPATH,"//input[@id='confirm_check']//parent::span"))
         # self.click_element(locator=(By.XPATH,"//input[@id='confirm_check']"))
         # self.click_element(locator=(By.XPATH,"//input[@type='checkbox']"))
         self.click_element(locator=(By.XPATH,'//li[text()="Pay ₹"]'))
 
 # doubt : what is the issue in line number 54 and how we can remove the indexing in above lines.....
 obj = Homework()
-# obj.bus_booking()
-obj.flight_booking()
+obj.bus_booking()
+#obj.flight_booking()

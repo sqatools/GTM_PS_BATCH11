@@ -47,9 +47,30 @@ class ActionMethods():
             action.drag_and_drop(element, drop_element).perform()
             time.sleep(2)
 
-#
+    def double_click(self):
+        self.driver.get("https://www.globalsqa.com/demo-site/draganddrop/")
+        frame_element = self.get_element(locator=(By.XPATH, "(//*[@class='demo-frame'])[1]"))
+        self.driver.switch_to.frame(frame_element)
+        action = ActionChains(self.driver)
+        text_element = self.get_element(locator=(By.XPATH, "//*[@class='page_heading']//h1"))
+        action.double_click(text_element).perform()
+        action.context_click(text_element)
+        # action.context_click()
+
+
+    def context_click(self):
+        self.driver.get("https://www.globalsqa.com/demo-site/draganddrop/")
+        frame_element = self.get_element(locator=(By.XPATH, "(//*[@class='demo-frame'])[1]"))
+        self.driver.switch_to.frame(frame_element)
+        action = ActionChains(self.driver)
+        # self.click_element(locator=(By.XPATH, "//*[@id='menu-item-53896']"))
+        text_element = self.get_element(locator=(By.XPATH, "//*[@id='menu-item-53896']"))
+        action.context_click(text_element).perform()
+
 
 obj = ActionMethods()
-obj.drag_drop()
+# obj.drag_drop()
+# obj.double_click()
+obj.context_click()
 
 

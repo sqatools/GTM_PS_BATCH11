@@ -1,0 +1,11 @@
+# command to install pytest framework
+->  pip install pytest
+
+# create a test with the name test_
+
+# create test function in the test file with test_ as prefix.
+
+
+# command to execute the pytest code
+  -> open the terminal in current directory
+  ->  python -m pytest -v test_smoke_cases

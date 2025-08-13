@@ -26,7 +26,7 @@ class sle_menthods:
         return element
 
     def click_element(self, locator, **kwargs):
-        self.get_element(locator=locator, **kwargs).click( )
+        self.get_element(locator=locator, **kwargs).click()
 
     def enter_data(self, locator, value, **kwargs):
         self.get_element(locator=locator, **kwargs).send_keys(value)
@@ -37,12 +37,21 @@ class sle_menthods:
         self.click_element(locator=(By.XPATH, "//button[@type='submit']"))
         time.sleep(10)
 
-    def Admin(self):
+    def Admin_addnewuser(self):
         # self.click_element(By.XPATH, "//a[@text()='Admin']")
-        self.click_element(locator =(By.XPATH,"//span[contains(.,'Admin')]//parent::a[@class='oxd-main-menu-item']"))
+        self.click_element(locator=(By.XPATH,"//span[contains(.,'Admin')]//parent::a[@class='oxd-main-menu-item']"))
         time.sleep(10)
-        self.enter_data(locator=(By.XPATH,"//label[contains(.,'Username')]//parent::input"),value='Rumeha')
-        time.sleep(10)
+        self.click_element(locator=(By.XPATH,"//button[@type='submit']"))
+
+
+        # self.enter_data(locator=(By.XPATH,"//label[contains(.,'Username')]//parent::div//following-sibling::div/input"),value='Rumeha')
+        # time.sleep(10)
+        # # // label[text( ) = 'User Role'] // parent:: // following - sibling::div / div / div / div[contains(., Admin
+        # # ')]
+        # self.enter_data(locator=(By.XPATH,"//input[@placeholder='Type for hints...']"),value='Rumeha')
+        # time.sleep(10)
+        # self.click_element(locator=(By.XPATH,"//label[text()='Status']//parent::div//following-sibling::div/div/div/div[text()='Enabled']"))
+        # time.sleep(10)
 
     # def forgot_password(self):
     #     self.enter_data(locator=(By.NAME,'username'),value='Admin')

@@ -1,0 +1,40 @@
+# command to install pytest framework
+->  pip install pytest
+
+# create a test with the name test_
+
+# create test function in the test file with test_ as prefix.
+
+
+# command to execute the pytest code
+  -> open the terminal in current directory
+  ->  python -m pytest -v test_smoke_cases.py
+
+
+# command to execute one single test cases
+  -> python -m pytest -v -k "test_division7" .\test_smoke_cases.py
+  -k :  mention the test cases name
+  -v : verbose :it means, it provides detailed information of execution
+  python -m : set current directory as root directory
+
+
+# command to execute group test cases
+    -> python -m pytest -v -m "smoke" .\test_smoke_cases.py
+
+    -m "smoke" :  specify the marker of the test cases.
+
+
+# execute the test cases with specific marker with or\and condition
+   ->  python -m pytest -v -m "smoke or sanity" .\test_smoke_cases.py
+
+
+# execute the test case with specified marker with and condition.
+   -> python -m pytest -v -m "smoke and sanity" .\test_smoke_cases.py
+
+
+# skip test cases with specific marker @pytest.mark.skip, @pytest.mark.skipif
+ @pytest.mark.skip     # unconditional skip
+ @pytest.mark.skipif(ENV=="TEST", reason="test is not available in test env,") # conditional skip
+
+
+# xfail test cases.

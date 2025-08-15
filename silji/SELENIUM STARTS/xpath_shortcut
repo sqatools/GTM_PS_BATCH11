@@ -1,0 +1,10 @@
+
+Relative XPath: - //input[@type='text']               or    //*[@type='text']
+
+text() method: -  //a[text()='Create a Page']        or  //*[text()='Create a Page']
+                     -> //button[text()='Log in']          or  //*[text()='Log in']
+
+contains() method:- //input[contains(@placeholder, 'Email address')]
+                     ->   //button[contains(@data-testid, 'royal-login')]
+
+                                  

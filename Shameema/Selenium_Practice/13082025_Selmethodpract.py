@@ -1,5 +1,6 @@
 import time
-
+from datetime import datetime
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.alert import Alert
@@ -113,8 +114,43 @@ class selmethods:
             print(link.get_attribute("href"))
 
 
+    def get_screenshot(self):
+        self.driver.get("https://automationbysqatools.blogspot.com/p/manual-testing.html")
+        self.get_attr(locator=(By.XPATH,"//a[contains(text(),'What is Software Testing')]"))
+        temp =1
+        list_of_link = self.driver.find_elements(By.XPATH,"//ul[@class='ullist']//a")
+        for link in list_of_link:
+            link.screenshot(f"link_{temp}.png")
+            print(link.get_attribute("href"))
+            temp += 1
+    def get_screenshot_in_a_folder(self):
+        self.driver.get("https://automationbysqatools.blogspot.com/p/manual-testing.html")
+        self.get_attr(locator=(By.XPATH,"//a[contains(text(),'What is Software Testing')]"))
+
+        temp = 1
+        list_of_link = self.driver.find_elements(By.XPATH,"//ul[@class='ullist']//a")
+        temp = 1
+        for link in list_of_link:
+            link.screenshot(f"images/link_{temp}.png")
+            print(link.get_attribute("href"))
+            temp +=1
+
+    def get_screenshot_in_a_new_folder(self):
+        self.driver.get("https://automationbysqatools.blogspot.com/p/manual-testing.html")
+        self.get_attr(locator=(By.XPATH, "//a[contains(text(),'What is Software Testing')]"))
+
+        list_of_link = self.driver.find_elements(By.XPATH, "//ul[@class='ullist']//a")
+        for link in list_of_link:
+            file_name = datetime.now().strftime("%d_%m_%y_%H_%M_%S")
+            folder_name = datetime.now().strftime("%d_%m_%y_%H_%M_%S")
+            if not os.path.exists(folder_name):
+                 os.mkdir(folder_name)
+            link.screenshot(f"{folder_name}/link_{file_name}.png")
+            print(link.get_attribute("href"))
 
 
+
+#que : folder_name = datetime.now().date() is not working
 
 
 
@@ -132,4 +168,7 @@ obj = selmethods()
 # obj.oranhrm_gettext()
 # obj.check_element_is_enabled_displayed_selected()
 # obj.isselected_ele()
-obj.get_ele_attribute()
+# obj.get_ele_attribute()
+# obj.get_screenshot(
+# obj.get_screenshot_in_a_folder()
+obj.get_screenshot_in_a_new_folder()

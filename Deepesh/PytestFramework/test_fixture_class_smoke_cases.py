@@ -2,6 +2,7 @@ import pytest
 
 ENV = "PROD"
 
+
 @pytest.mark.usefixtures("class_fixture")
 class TestSmokeClass:
 

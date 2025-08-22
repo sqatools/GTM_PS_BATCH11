@@ -31,7 +31,7 @@ class alets_handling:
         self.get_ele(locator=locator,**kwargs).send_keys(value)
 
     def get_attrib(self,locator,attrib_value,**kwargs):
-        self.get_ele(locator=locator,**kwargs).get_attribute(attrib_value)
+        return self.get_ele(locator=locator,**kwargs).get_attribute(attrib_value)
 
     def get_txt(self,locator,**kwargs):
         return self.get_ele(locator=locator,**kwargs).text

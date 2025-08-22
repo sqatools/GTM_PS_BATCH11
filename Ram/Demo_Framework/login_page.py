@@ -62,3 +62,5 @@ class CreateAccountPage(SeleniumBase):
         self.enter_new_password(password)
         self.click_signup_button()
 
+
+

@@ -38,41 +38,20 @@ class OrangeHrmLogin:
         self.element_click(locator=(By.XPATH, "//a[text()= 'Users']"))
         self.element_click(locator=(By.XPATH, "//i[contains(@class, 'oxd-icon bi-plus "
                                               "oxd-button-icon')]//parent::button[normalize-space(string(.))='Add']"))
-
         time.sleep(3)
         self.driver.find_element(By.XPATH, "//label[text()='User Role']/following::div[1]").click()
         time.sleep(1)
         self.get_element(locator=(By.XPATH, "//*[normalize-space(text())='Admin']")).click()
-        time.sleep(3)
         self.get_element(locator=(By.XPATH, "//input[@placeholder='Type for hints...']")).send_keys("John")
         self.driver.find_element(By.XPATH, "//label[text()='Status']/following::div[1]").click()
         time.sleep(1)
         self.get_element(locator=(By.XPATH, "//*[normalize-space(text())='Enabled']")).click()
-        time.sleep(2)
-        self.get_element(locator=(By.XPATH, "//label[text()='Username']/following::input[1]")).send_keys("John1234")
-        self.get_element(locator=(By.XPATH, "//label[text()='Password']/following::input[1]")).send_keys("John@1234")
-        self.get_element(locator=(By.XPATH, "//label[text()='Confirm Password']/following::input[1]")).send_keys("John@1234")
-        time.sleep(2)
-        self.element_click(locator=(By.XPATH, "//button[contains(., 'Save')]"))
-        time.sleep(7)
+        time.sleep(5)
+        self.get_element(locator=(By.XPATH,
+                                  "//label[text()='Username']//parent::div//parent::div[contains(@class,'oxd-input-group oxd-input-field')]")).send_keys(
+            "abcd")
+        time.sleep(10)
 
 
 obj = OrangeHrmLogin()
 obj.orangehrm_login()
-#
-# driver = webdriver.Chrome()
-# driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser")
-#
-# wait = WebDriverWait(driver, 10)
-#
-#     # Step 1: Click the dropdown
-# dropdown = driver.find_element(By.XPATH,
-#                                    "//label[text()='User Role']/ancestor::div[contains(@class,'oxd-input-group')]")
-# dropdown.click()
-#
-# # Step 2: Wait for and click the 'Admin' option
-# option = wait.until(ec.element_to_be_clickable((By.XPATH, "//div[@role='option' and text()='Admin']")))
-# option.click()
-#
-#
-#

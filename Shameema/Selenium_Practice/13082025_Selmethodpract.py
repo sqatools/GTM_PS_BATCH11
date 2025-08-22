@@ -39,14 +39,14 @@ class selmethods:
         text = self.get_elem(locator=locator,**kwargs).text
         print(text)
 
-    def get_attr(self,locator,**kwargs):
-        link=self.get_elem(locator=locator,**kwargs).get_attribute("href")
+    def get_attr(self,locator, attrib_name):
+        link=self.get_elem(locator=locator,**kwargs).get_attribute(attrib_name)
         print("Link :",link)
     def enabl_display_selected(self,locator,**kwargs):
         enable = self.get_elem(locator=locator).is_enabled()
-        display = self.get_elem(locator=locator).is_displayed()
-        selected = self.get_elem(locator=locator).is_selected()
-        return enable , display, selected
+        # display = self.get_elem(locator=locator).is_displayed()
+        # selected = self.get_elem(locator=locator).is_selected()
+        return enable
 
     def click_ele(self,locator,**kwargs):
         self.get_elem(locator=locator,**kwargs).click()
@@ -65,6 +65,7 @@ class selmethods:
 
         if (user_name_enabled == True):
             self.send_data(locator=(By.NAME,"username"),value='user_name')
+            self.get_attr(locator=(By.NAME, "username"), attrib_name='')
             time.sleep(3)
         if (pass_word_enabled == True):
             self.send_data(locator=(By.NAME, "password"), value='pass_value')
@@ -74,6 +75,7 @@ class selmethods:
         time.sleep(5)
 
     def check_element_is_enabled_displayed(self):
+            self.is
             user_name_enabled = self.get_elem(locator=(By.NAME, "username")).is_enabled( )
             print("user name field is enabled :", user_name_enabled)
             pass_word_enabled = self.get_elem(locator=(By.NAME, "password")).is_enabled( )
@@ -138,15 +140,19 @@ class selmethods:
     def get_screenshot_in_a_new_folder(self):
         self.driver.get("https://automationbysqatools.blogspot.com/p/manual-testing.html")
         self.get_attr(locator=(By.XPATH, "//a[contains(text(),'What is Software Testing')]"))
-
-        list_of_link = self.driver.find_elements(By.XPATH, "//ul[@class='ullist']//a")
+        print(self.enabl_display_selected(locator=(By.XPATH, "//a[contains(text(),'What is Software Testing')]"))
+        list_of_link = self.get_elem(locator=(By.XPATH, "//ul[@class='ullist']//a"), cond=ec.presence_of_all_elements_located)
         for link in list_of_link:
+
             file_name = datetime.now().strftime("%d_%m_%y_%H_%M_%S")
-            folder_name = datetime.now().strftime("%d_%m_%y_%H_%M_%S")
+            folder_name = datetime.now().strftime("%d_%m_%y")
             if not os.path.exists(folder_name):
                  os.mkdir(folder_name)
-            link.screenshot(f"{folder_name}/link_{file_name}.png")
+            folder_path = os.path.join(os.getcwd(), folder_name)
+            file_path = os.path.join(folder_path, f"{file_name}.png")
+            link.screenshot(file_path)
             print(link.get_attribute("href"))
+            time.sleep(3)
 
 
 

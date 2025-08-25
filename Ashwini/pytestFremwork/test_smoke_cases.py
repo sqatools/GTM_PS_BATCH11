@@ -1,7 +1,7 @@
-import pytest
+
 
 import pytest
-ENV = "TEST"
+ENV = "PROD"
 
 @pytest.mark.smoke
 def test_addition():
@@ -21,8 +21,8 @@ def test_multiplication():
     v1=5
     v2=4
     assert v1*v2==20
-@pytest.mark.skip( ENV == "TEST",reason="This code is not available in test ENV")
-@pytest.mark.sanity
+@pytest.mark.skipif( ENV == "TEST",reason="This code is not available in test ENV")
+@pytest.mark.smoke
 def test_division():
     n1=50
     n2=5
@@ -38,7 +38,7 @@ def test_subtraction2():
     n1=30
     n2=10
     assert n1-n2==10
-@pytest.mark.smoke
+
 def test_multiplication3():
     v1=5
     v2=4

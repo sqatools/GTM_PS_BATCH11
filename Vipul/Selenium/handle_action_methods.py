@@ -40,11 +40,14 @@ class ActionMethods():
         frame_element = self.get_element(locator=(By.XPATH, "(//*[@class='demo-frame'])[1]"))
         self.driver.switch_to.frame(frame_element)
         action = ActionChains(self.driver)
-        drag_elements = self.driver.find_elements(By.XPATH, "//*[@id='gallery']//img")# self.get_element(locator=(By.XPATH, "//*[@id='gallery']//img"))
+        src_element = self.get_element(locator=(By.XPATH, "//h5[text()='High Tatras']//parent::li"))
         drop_element = self.get_element(locator=(By.XPATH, "//*[@id='trash']"))
+        action.drag_and_drop(src_element, drop_element).perform()
 
-        for element in drag_elements:
-            action.drag_and_drop(element, drop_element).perform()
+        for i in range(2, 5):
+            image = self.get_element(locator=(By.XPATH, f"//h5[text()='High Tatras {i}']//parent::li"))
+            drop_element = self.get_element(locator=(By.XPATH, "//*[@id='trash']"))
+            action.drag_and_drop(image, drop_element).perform()
             time.sleep(2)
 
     def double_click(self):
@@ -60,17 +63,17 @@ class ActionMethods():
 
     def context_click(self):
         self.driver.get("https://www.globalsqa.com/demo-site/draganddrop/")
-        frame_element = self.get_element(locator=(By.XPATH, "(//*[@class='demo-frame'])[1]"))
-        self.driver.switch_to.frame(frame_element)
+        # frame_element = self.get_element(locator=(By.XPATH, "(//*[@class='demo-frame'])[1]"))
+        # self.driver.switch_to.frame(frame_element)
         action = ActionChains(self.driver)
         # self.click_element(locator=(By.XPATH, "//*[@id='menu-item-53896']"))
-        text_element = self.get_element(locator=(By.XPATH, "//*[@id='menu-item-53896']"))
+        text_element = self.get_element(locator=(By.XPATH, "//div[@id='menu']//a[text()='About']//parent::li"))
         action.context_click(text_element).perform()
 
 
 obj = ActionMethods()
 # obj.drag_drop()
 # obj.double_click()
-obj.context_click()
-
+# obj.context_click()
+obj.multiple_drag_drop()
 

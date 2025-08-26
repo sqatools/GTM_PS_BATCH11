@@ -10,14 +10,14 @@ class Adminpage(seleniumBase):
     def launch_login_page(self, url):
         self.driver.get(url)
 
-    def Enter_Username(self, username):
-        self.Enter_text(UserManagement.username_fields, username)
+    # def Enter_Username(self, username):
+    #     self.Enter_text(UserManagement.username_fields, username)
+    #
+    # def Enter_password(self, password):
+    #     self.Enter_text(UserManagement.password_fields, password)
 
-    def Enter_password(self, password):
-        self.Enter_text(UserManagement.password_fields, password)
-
-    def click_login_button(self):
-        self.Click_element(UserManagement.login_button_fields)
+    # def click_login_button(self):
+    #     self.Click_element(UserManagement.login_button_fields)
 
     def navigate_adminpage_link(self):
         self.Click_element(UserManagement.User_management_link)
@@ -52,10 +52,10 @@ class Adminpage(seleniumBase):
     def save(self):
         self.Click_element(UserManagement.save)
 
-    def Manegemnet(self, username, password, en, un, p, cp):
-        self.Enter_Username(username)
-        self.Enter_password(password)
-        self.click_login_button()
+    def Manegemnet(self, en, un, p, cp):
+        # self.Enter_Username(username)
+        # self.Enter_password(password)
+        # self.click_login_button()
         self.navigate_adminpage_link()
         self.navigate_userlink()
         self.navigate_addbutton()

@@ -9,4 +9,3 @@ python -m pytest -v -s ./tests/
 -s :  show print statement value on console
 -m : marker to execution specific test cases
 --html :  provide report file path
-

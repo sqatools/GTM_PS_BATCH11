@@ -6,3 +6,4 @@ class AdminLoc:
     job_title_link = (By.XPATH, "//a[contains(text(), 'Job Titles')]//parent::li")
     add_button = (By.XPATH, "//button[normalize-space()='Add']")
 
+

@@ -16,6 +16,6 @@ class TestFb:
         self.driver.back()
         time.sleep(10)
         self.fb.Create_new_Ac(fname="abc",lname="xyz",ed="8698570520",npass="Demo@123")
-        time.sleep(20)
+        time.sleep(10)
 
 

@@ -7,7 +7,7 @@ class seleniumBase:
         self.driver=driver
         self.wait=WebDriverWait(self.driver,20)
 
-    def get_element(self,locator,cond=ec.visibility_of_element_located):
+    def get_element(self,locator,cond=ec.element_to_be_clickable):
         element=self.wait.until(cond(locator))
         return element
     def Enter_text(self,locator,value):

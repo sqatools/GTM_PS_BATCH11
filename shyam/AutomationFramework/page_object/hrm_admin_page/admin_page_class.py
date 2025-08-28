@@ -20,6 +20,9 @@ class Adminpage(seleniumBase):
     #     self.Click_element(UserManagement.login_button_fields)
 
     def navigate_adminpage_link(self):
+        self.Click_element(UserManagement.Admin_page_link)
+
+    def navigate_userman_npage_link(self):
         self.Click_element(UserManagement.User_management_link)
 
     def navigate_userlink(self):
@@ -52,11 +55,12 @@ class Adminpage(seleniumBase):
     def save(self):
         self.Click_element(UserManagement.save)
 
-    def Manegemnet(self, en, un, p, cp):
+    def Manege(self, en, un, p, cp):
         # self.Enter_Username(username)
         # self.Enter_password(password)
         # self.click_login_button()
         self.navigate_adminpage_link()
+        self.navigate_userman_npage_link()
         self.navigate_userlink()
         self.navigate_addbutton()
         self.userrole()

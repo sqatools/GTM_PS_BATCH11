@@ -1,0 +1,11 @@
+2025-08-28 22:16:57 [INFO] (login_page_class.py:10) launching the website url : https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-08-28 22:17:02 [INFO] (login_page_class.py:26) login to hrm website
+2025-08-28 22:17:02 [INFO] (login_page_class.py:14) entering username: Admin
+2025-08-28 22:17:02 [INFO] (selenium_base.py:22) enter value: Admin on element with locator: ('name', 'username')
+2025-08-28 22:17:02 [INFO] (selenium_base.py:13) getting element with locator ('name', 'username')
+2025-08-28 22:17:04 [INFO] (login_page_class.py:18) entering password: admin123
+2025-08-28 22:17:04 [INFO] (selenium_base.py:22) enter value: admin123 on element with locator: ('name', 'password')
+2025-08-28 22:17:04 [INFO] (selenium_base.py:13) getting element with locator ('name', 'password')
+2025-08-28 22:17:04 [INFO] (login_page_class.py:22) click on login button
+2025-08-28 22:17:04 [INFO] (selenium_base.py:18) click on element with locator: ('xpath', "//button[normalize-space()='Login'] ")
+2025-08-28 22:17:04 [INFO] (selenium_base.py:13) getting element with locator ('xpath', "//button[normalize-space()='Login'] ")

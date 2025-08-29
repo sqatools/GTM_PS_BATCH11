@@ -22,7 +22,8 @@ class TestFGPage:
     #     time.sleep(5)
 
     @pytest.mark.smoke
-    def test_facebook_loginpage(self):
+    def test_facebook_loginpage(self, request):
+        self.fb.log.info(f"Test name: {request.node.name}")
         self.fb.launch_fb_login(url=self.exl_data['B2'].value)
         self.fb.login_to_fb(email=self.exl_data['B3'].value, password=self.exl_data['B4'].value)
         time.sleep(5)

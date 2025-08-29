@@ -19,7 +19,8 @@ class TestLoginHRM:
     #     self.lp.login_to_rhm(username="Admin", password="admin123")
     #     time.sleep(10)
     @pytest.mark.sanity
-    def test_login_hrm_website_and_verify(self):
+    def test_login_hrm_website_and_verify(self, request):
+        self.lp.log.info(f"Test name: {request.node.name}")
         self.lp.launch_login_page(url=self.login_data['url'])
         self.lp.login_to_rhm(username=self.login_data['username'], password=self.login_data['password'])
         time.sleep(10)

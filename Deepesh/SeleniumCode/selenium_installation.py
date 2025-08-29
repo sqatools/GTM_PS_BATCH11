@@ -21,3 +21,4 @@ time.sleep(5)  # static wait
 driver.find_element(By.NAME, "login").click()
 time.sleep(5)  # static wait
 driver.close()
+#################################

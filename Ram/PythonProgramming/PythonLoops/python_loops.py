@@ -1,0 +1,132 @@
+"""
+  * * *     # i = 0
+*       *   # i = 1
+*       *   # i = 2
+*       *   # i = 3
+*       *   # i = 4
+*       *   # i = 5
+  * * *     # i = 6
+"""
+
+for i in range(7):
+    for j in range(1, 6):
+        if i in [0, 6]:
+            if j in [1, 5]:
+                print(" ", end=" ")
+            else:
+                print("*", end=" ")
+        elif i in [1, 2, 3, 4, 5]:
+            if j in [1, 5]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+
+    print()
+
+print("_" * 50)
+# Program to print the T pattern with for loop
+"""
+* * * * * *   # i = 0
+* * * * * *   # i = 1
+    * *       # i = 2
+    * *       # i = 3
+    * *       # i = 4
+    * *       # i = 5
+* * * * * *   # i = 6
+* * * * * *   # i = 7
+"""
+
+for i in range(8):
+    for j in range(6):
+        if i in [0, 1, 6, 7]:
+            print("*", end=" ")
+        elif i in [2, 3, 4, 5]:
+            if j in [2, 3]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+
+    print()
+
+"""
+*   * * *   # i = 0
+*   *       # i = 1
+* * * * *   # i = 2
+    *   *   # i = 3
+* * *   *   # i = 4
+"""
+print("__" * 40)
+for i in range(5):
+    for j in range(0, 5):
+        if i == 0:
+            if j == 1:
+                print(" ", end="  ")
+            else:
+                print("*", end="  ")
+        elif i == 1:
+            if j in [1, 3, 4]:
+                print(" ", end="  ")
+            else:
+                print("*", end="  ")
+        elif i == 2:
+            if j in [0, 1, 2, 3, 4]:
+                print("*", end="  ")
+            else:
+                continue
+        elif i == 3:
+            if j in [0, 1, 3]:
+                print(" ", end="  ")
+            else:
+                print("*", end="  ")
+        elif i == 4:
+            if j == 3:
+                print(" ", end="  ")
+            else:
+                print("*", end="  ")
+
+    print()
+
+    # Program to print I Pattern
+
+"""
+* * * * * *   # i = 0
+* * * * * * 
+    * *
+    * *
+    * *
+    * *
+    * *        # i = 6
+
+"""
+print("__" * 40)
+for i in range(7):
+    for j in range(0, 6):
+        if i in [0, 1]:
+            if j in [0, 1, 2, 3, 4, 5]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+        elif i in [2, 3, 4, 5, 6]:
+            if j in [2, 3]:
+                print("*", end=" ")
+            else:
+                print(" ", end=" ")
+
+    print()
+
+"""
+* * * * *
+* * * *
+* * * 
+* *
+*
+"""
+print("--" * 40)
+for i in range(1, 6):
+    for j in range(6, i, -1):
+        # (OR) for j in range(5, i-1, -1):
+        print("*", end=" ")
+    print()
+
+print("__" * 40)
+

@@ -3,6 +3,7 @@ import pytest
 import os
 from datetime import datetime
 
+
 @pytest.fixture(scope="class")
 def get_driver():
     driver = webdriver.Chrome()

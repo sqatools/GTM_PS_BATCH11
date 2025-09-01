@@ -5,11 +5,11 @@ import time
 
 from selenium.webdriver.support.select import Select
 
-driver = webdriver.Chrome()
-driver.get("https://demo.automationtesting.in/Register.html")
-driver.maximize_window()
-Title = driver.title
-print(Title)
+# driver = webdriver.Chrome()
+# driver.get("https://demo.automationtesting.in/Register.html")
+# driver.maximize_window()
+# Title = driver.title
+# print(Title)
 # #time.sleep(5)
 # driver.find_element(By.XPATH,"//*[@id='basicBootstrapForm']/div[1]/div[1]/input").send_keys("Success")
 # #time.sleep(5)
@@ -33,16 +33,22 @@ print(Title)
 # skills = Select(drp)
 # skills.select_by_visible_text("FileMaker Pro")
 
+#
+# select_element = driver.find_element(By.XPATH, "//*[@id='basicBootstrapForm']/div[8]/select")
+# skills = Select(select_element)
+# skills.select_by_visible_text("FileMaker Pro")
+#
+#
+#
+# time.sleep(5)
+# driver.close()
 
-select_element = driver.find_element(By.XPATH, "//*[@id='basicBootstrapForm']/div[8]/select")
-skills = Select(select_element)
-skills.select_by_visible_text("FileMaker Pro")
 
-
-
-time.sleep(5)
-driver.close()
-
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+Title = driver.title
+print(Title)
 
 
 

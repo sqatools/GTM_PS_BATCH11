@@ -10,11 +10,11 @@ Type of API based on Accessibility:
 # Types of API Based on Architectural Style
 1.  REST API (Representational State Transfer) : This API architecture follows stateless approach.
     Rest API user HTTP Methods
-    1. GET
-    2. POST
-    3. PUT
-    4. PATCH
-    5. DELETE
+    1. GET :  To get the information
+    2. POST : To create new entry
+    3. PUT :  To update the existing entry
+    4. PATCH : To update specific field of existing entry
+    5. DELETE :  Delete method.
 
     # EACH  API Execution return the status code as per the response.
     100 - 199 : information response
@@ -22,7 +22,8 @@ Type of API based on Accessibility:
     300 - 399 : redirectional response
     400 - 499 : client errors
     500 - 599 : server errors
-    # Notes guide
+
+    # Notes guide for response code
     https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status#information_responses
 
 2.  SOAP API : (Simple Object Access Protocol) APIs: SOAP API maintain state of API execution

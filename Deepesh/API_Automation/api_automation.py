@@ -112,3 +112,13 @@ def delete_entry(id):
 #delete_entry("ff8081819782e69e0199106c1ff931e2")
 
 
+def get_all_object_details_with_auth():
+    url = "https://gorest.co.in/public/v2/users"
+    payload = {}
+    headers = {
+        'Authorization': 'b9b3492b489c402fe0cd7e9299e6fc7b172ccf67407937d21904aaffba74802e'
+    }
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    print(response.status_code)
+    pprint(response.json())

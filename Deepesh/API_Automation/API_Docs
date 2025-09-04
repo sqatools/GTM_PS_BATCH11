@@ -1,0 +1,32 @@
+API :   Application Programming Interface
+Type of API based on Accessibility:
+
+1.  Public API :  API those are available for public use
+2.  Partner API :  API that we can share with business partner e.g. google map API
+3.  Internal API :  API that is only available for internal application.
+4.  Composite API :  combination of multiple API
+
+
+# Types of API Based on Architectural Style
+1.  REST API (Representational State Transfer) : This API architecture follows stateless approach.
+    Rest API user HTTP Methods
+    1. GET
+    2. POST
+    3. PUT
+    4. PATCH
+    5. DELETE
+
+    # EACH  API Execution return the status code as per the response.
+    100 - 199 : information response
+    200 - 299 : success response
+    300 - 399 : redirectional response
+    400 - 499 : client errors
+    500 - 599 : server errors
+    # Notes guide
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status#information_responses
+
+2.  SOAP API : (Simple Object Access Protocol) APIs: SOAP API maintain state of API execution
+    and its heavy in terms of performance as it maintains the cache of API calls.
+
+
+

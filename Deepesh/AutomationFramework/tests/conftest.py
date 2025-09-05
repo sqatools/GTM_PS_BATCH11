@@ -2,6 +2,7 @@ from selenium import webdriver
 import pytest
 import os
 from datetime import datetime
+from ..base.webdriver_factory import WebdriverFactory
 
 
 @pytest.fixture(scope="class")
@@ -9,6 +10,22 @@ def get_driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
     yield driver
+    driver.close()
+
+
+def pytest_addoption(parser):
+    parser.addoption("--browserName", action="store", default="chrome", help="browser to execute automation")
+    parser.addoption("--headlessValue", action="store", default=False, help="headless mode browser execution")
+
+
+@pytest.fixture(scope="class")
+def get_driver_headless(request, pytestconfig):
+    browser = pytestconfig.getoption("browserName")
+    headless = pytestconfig.getoption("headlessValue")
+    wf = WebdriverFactory(browser=browser, headless=headless)
+    driver = wf.get_driver_instance()
+    request.cls.driver = driver
+    yield
     driver.close()
 
 

@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-
-driver = webdriver.Chrome()
-driver.get("https://testpages.herokuapp.com/styled/alerts/alert-test.html")
-driver.maximize_window()
+#
+# driver = webdriver.Chrome()
+# driver.get("https://testpages.herokuapp.com/styled/alerts/alert-test.html")
+# driver.maximize_window()
 ### Alert box ###
 # driver.find_element(By.ID, 'alertexamples').click()
 # alert = driver.switch_to.alert
@@ -40,3 +40,15 @@ driver.maximize_window()
 
 # driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth")
 # time.sleep(5)
+
+
+### Notification popup from browser ###
+from selenium.webdriver.chrome.options import Options
+
+
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://whatmylocation.com/")
+time.sleep(5)
+ops = Options()
+ops.add_argument("--disable-notifications")

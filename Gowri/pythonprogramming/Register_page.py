@@ -1,8 +1,9 @@
+from select import select
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
-
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.select import Select
 
 # driver = webdriver.Chrome()
@@ -43,28 +44,64 @@ from selenium.webdriver.support.select import Select
 # time.sleep(5)
 # driver.close()
 
-
-driver = webdriver.Chrome()
-driver.maximize_window()
-driver.get("https://rahulshettyacademy.com/AutomationPractice/")
-Title = driver.title
-print(Title)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Checkboxes = driver.find_elements(By.CLASS_NAME,"form-control ng-pristine ng-valid ng-touched")
+#
+# driver = webdriver.Chrome()
+# driver.maximize_window()
+# driver.get("https://vinothqaacademy.com/iframe/")
+# Title = driver.title
+# print(Title)
+#
+# driver.execute_script("window.scrollBy(0,500);")
+# frame3 = driver.switch_to.frame("registeruser")
+# driver.find_element(By.CLASS_NAME, "vfb-desc")
+# frame3_title = driver.execute_script("return document.title;")
+# driver.execute_script("window.scrollBy(0,1000);")
+# driver.find_element(By.NAME,"vfb-5").send_keys("Courage")
+# #driver.find_element(By.XPATH, "//*[@value='Female']").click()
+# radio = driver.find_elements(By.XPATH, "//*[@name='vfb-31']")
+# print(len(radio))
+# for r in radio:
+#     Gender = r.get_attribute("value")
+#     print(Gender)
+# Checkboxes = driver.find_elements(By.XPATH, "//*[@name='vfb-20[]']")
 # print(len(Checkboxes))
+# for box in Checkboxes:
+#     boxes = box.get_attribute("value")
+#     print(boxes)
+# country = driver.find_element(By.XPATH, "//*[@id='item-vfb-13']/div/span[7]/span/span[1]/span/span[2]")
+# drp_count = Select(country)
+# allopts = drp_count.options
+# for opt in allopts:
+#     count = opt.get_attribute("value")
+#     print(count)
+#
+#
+#
+#
+# # alloptions = drp.
+# time.sleep(3)
+
+from selenium.webdriver.chrome.options import Options
+
+ops = Options()
+ops.add_argument("--disable-notifications")
+driver = webdriver.Chrome(options=ops)
+driver.maximize_window()
+driver.get("https://whatmylocation.com/")
+time.sleep(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,17 +1,101 @@
-# import time
-from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+import time
 
-# driver = webdriver.chrome()
-# driver.minimize_window()
+
+driver= webdriver.Chrome()
+driver.maximize_window()
 # driver.implicitly_wait(10)
-# driver.get("https://www.facebook.com/")
-# driver.find_element(By.NAME, "email").send_keys("user1@gamil.com")
-# driver.find_element(By.NAME,"Pass").send_keys("user@123")
-# time.sleep(5)
-# driver.find_element(By.NAME, "login").click()
-# time.sleep(5)
-# driver.close()
+driver.get("https://www.dummyticket.com/dummy-ticket-for-visa-application/")
+# driver.execute_script("window.scrollBy(0, 400);")
+
+# Radio buttons
+driver.find_element(By.CSS_SELECTOR,"#product_550").click()
+# scroll
+Passenger = driver.find_element(By.XPATH,"//h3[normalize-space()='Passenger details:']")
+driver.execute_script("arguments[0].scrollIntoView();",Passenger)
+
+# Passenger Details
+driver.find_element(By.XPATH,"//input[@id='travname']").send_keys("Sai Chandhu")
+driver.find_element(By.XPATH,"//input[@id='travlastname']").send_keys("Mike")
+
+# Additional Info
+driver.find_element(By.CSS_SELECTOR,"#order_comments").send_keys("Place near the door")
+
+# Date of birth
+driver.find_element(By.XPATH,"//input[@id='dob']").click() # open
+Month=Select(driver.find_element(By.XPATH,"//select[@aria-label='Select month']"))
+Month.select_by_visible_text("May") # Month
+
+Year=Select(driver.find_element(By.XPATH,"//select[@aria-label='Select year']"))
+Year.select_by_visible_text("1997") # Year
+
+Dates= driver.find_elements(By.XPATH,"//table[@class='ui-datepicker-calendar']/tbody/tr/td/a") # date
+
+for date in Dates:
+    if date.text == "8":
+        date.click()
+        break
+
+# Sex radio button
+
+# Sex = driver.find_elements(By.CSS_SELECTOR,"[name='sex']")
+# print(len(Sex))
+# for S in Sex:
+#     value = S.get_attribute("value")
+#     print(value)
+
+driver.find_element(By.XPATH,"//input[@id='sex_1']").click()
+
+# scroll
+Trip = driver.find_element(By.XPATH,"//p[@id='traveltype_field']//label[@for='1']")
+driver.execute_script("arguments[0].scrollIntoView();",Trip)
+
+# Trip Type
+driver.find_element(By.CSS_SELECTOR,"#traveltype_1").click()
+
+# From City To City
+driver.find_element(By.XPATH,"//input[@id='fromcity']").send_keys("Chennai")
+driver.find_element(By.XPATH,"//input[@id='tocity']").send_keys("Banglore")
+
+# Depature Date
+driver.find_element(By.XPATH,"//input[@id='departon']").click()
+
+Months = Select(driver.find_element(By.XPATH,"//select[@aria-label='Select month']"))
+Months.select_by_visible_text("Oct") # Month
+
+Year = Select(driver.find_element(By.XPATH,"//select[@aria-label='Select year']"))
+Year.select_by_visible_text("2025")
+
+dates = driver.find_elements(By.XPATH,"//table[@class='ui-datepicker-calendar']/tbody/tr/td/a")
+
+for date in dates:
+    if date.text == "10":
+        date.click()
+        break
+
+# scroll Delivery_options
+Delivery_options = driver.find_element(By.XPATH,"//h2[normalize-space()='Delivery options:']")
+driver.execute_script("arguments[0].scrollIntoView();",Delivery_options)
+
+driver.find_element(By.XPATH,"//p[@id='reasondummy_field']//span[@role='combobox']").click()
+driver.find_element(By.XPATH,"//input[@role='combobox']").click()
+# Delivery =Select (driver.find_element(By.XPATH,"//ul[@id='select2-reasondummy-results']/li"))
+# Delivery.select_by_visible_text(" Proof of return at airport")
+
+
+
+time.sleep(5)
+
+
+
+
+
+
+
+
 
 
 

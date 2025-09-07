@@ -33,7 +33,6 @@ Year=Select(driver.find_element(By.XPATH,"//select[@aria-label='Select year']"))
 Year.select_by_visible_text("1997") # Year
 
 Dates= driver.find_elements(By.XPATH,"//table[@class='ui-datepicker-calendar']/tbody/tr/td/a") # date
-
 for date in Dates:
     if date.text == "8":
         date.click()
@@ -47,14 +46,14 @@ for date in Dates:
 #     value = S.get_attribute("value")
 #     print(value)
 
-driver.find_element(By.XPATH,"//input[@id='sex_1']").click()
+driver.find_element(By.XPATH,"//input[@id='sex_2']").click()
 
 # scroll
 Trip = driver.find_element(By.XPATH,"//p[@id='traveltype_field']//label[@for='1']")
 driver.execute_script("arguments[0].scrollIntoView();",Trip)
 
 # Trip Type
-driver.find_element(By.CSS_SELECTOR,"#traveltype_1").click()
+driver.find_element(By.CSS_SELECTOR,"#traveltype_2").click()
 
 # From City To City
 driver.find_element(By.XPATH,"//input[@id='fromcity']").send_keys("Chennai")
@@ -80,10 +79,12 @@ for date in dates:
 Delivery_options = driver.find_element(By.XPATH,"//h2[normalize-space()='Delivery options:']")
 driver.execute_script("arguments[0].scrollIntoView();",Delivery_options)
 
-driver.find_element(By.XPATH,"//p[@id='reasondummy_field']//span[@role='combobox']").click()
-driver.find_element(By.XPATH,"//input[@role='combobox']").click()
-# Delivery =Select (driver.find_element(By.XPATH,"//ul[@id='select2-reasondummy-results']/li"))
-# Delivery.select_by_visible_text(" Proof of return at airport")
+
+
+
+
+
+
 
 
 

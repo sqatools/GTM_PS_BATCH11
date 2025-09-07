@@ -22,6 +22,6 @@ driver.switch_to.frame('iframeResult')
 #double click
 act= ActionChains(driver)
 button= driver.find_element(By.XPATH,"//button[normalize-space()='Double-click me']")
-act.double_click(button).perform()
+Action=act.double_click(button).perform()
 
 time.sleep(5)

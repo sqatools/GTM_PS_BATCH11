@@ -83,3 +83,18 @@
 	* Read specific row and column data
 	* Read all the rows and columns data
 	* Read data based on condition (List of books written by same author)
+
+14. Datepicker
+
+15. Mouse operations
+    * Mouse hover --- move_to_element(element)
+    * Right click --- context_click(element)
+    * Double click --- double_click(element)
+    * Drag and Drop --- drag_and_drop(source,taraget)
+    * Slider --- drag_and_drop_by_offset(element,X-axis,Y-axis)
+
+1. How to handle mouse operations.
+2. Different types of mouse operations.
+3. How to perform those mouse operations.
+4. Different methods are available.
+

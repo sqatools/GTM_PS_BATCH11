@@ -21,11 +21,21 @@ driver.maximize_window()
 driver.implicitly_wait(10)
 driver.get("https://testautomationcentral.com/demo/drag_and_drop.html")
 
-
 act= ActionChains(driver)
 source= driver.find_element(By.ID,"draggable")
 target= driver.find_element(By.ID,"droppable")
 act.drag_and_drop(source,target).perform()
+
+# driver.get("https://www.globalsqa.com/demo-site/draganddrop/")
+#
+# # frame= driver.find_element(By.XPATH,"//iframe[@class='demo-frame lazyloaded']")
+# # driver.switch_to.frame(frame)
+#
+# source = driver.find_element(By.XPATH,"//img[@alt='The peaks of High Tatras']")
+# target = driver.find_element(By.ID,"trash")
+#
+# act.drag_and_drop(source,target).perform()
+
 
 
 time.sleep(5)

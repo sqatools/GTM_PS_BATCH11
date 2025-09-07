@@ -2,7 +2,7 @@
 # 1) Mouse hover --- move_to_element(element)
 # 2) right click --- context_click(element)
 # 3) double click --- double_click(element)
-# 4) Drag and Drop --- drag_and_drop(source,taraget)
+# 4) Drag and Drop --- drag_and_drop(source,taraget) ---(slider.loaction)
 # 5) Slider --- drag_and_drop_by_offset(element,X-axis,Y-axis)
 
 

@@ -1,0 +1,100 @@
+                Topics covered to practice
+
+
+1. Input fields
+   * Enter values into text boxes with send keys methods
+   * Enter values without send keys
+
+2. Checkboxes
+   * Select all checkboxes
+   * select first 2 checkboxes
+   * select last 2 checkboxes
+   * selct any random checkboxes
+   * Clearing checkboxes
+   * Find total no of checkboxes and print their values
+
+3. Dropdown
+   * select option from the dropdown
+   * Find the count of available dropdown options
+   * Capture all the elements from dropdown and print them
+   * Select optin from dropdown without using builtin methods like visible_text,index,value
+   * If select tag is not available for dropdown how to handle it
+
+4. Radio button
+   * select radio button
+   * count of radio buttons and their values
+
+5. Links
+   * Clicking on links
+   * Find the number of links in the webpage
+   * Print all the available link names in the webpage
+   * find the count of broken links
+
+6. Commands
+   Navigational commands
+     * back()
+     * forward()
+     * refresh()
+
+   Application Commands
+     * get()
+     * title()
+     * current_url
+     * page_source
+
+   Browser commands
+     * close()
+	 * quit()
+
+   conditional commands
+     * is_displayed()
+	 * is_selected()
+	 * is_enabled()
+
+7. Scroll webpages
+     * Scroll by indexes
+	 * scroll by web elements
+	 * scroll to end of the page
+
+8. Alerts/Popups
+     * Switch_to_alert
+	 * text
+	 * accept
+	 * dismiss
+
+9. Authentication popups
+
+10.Notification popup from browser
+
+11. Iframes
+     * switch_to.frame(name of the frame)
+     * switch_to.frame(ID of the frame)
+     * switch_to.frame(webelement)
+     * switch_to.frame(index)
+	 * innerframes
+	 * Switch from child frame to parent frame
+
+12. Browser windows
+
+13. Webtables
+
+    Static webtable
+    * Count no of rows and columns
+	* Read specific row and column data
+	* Read all the rows and columns data
+	* Read data based on condition (List of books written by same author)
+
+14. Datepicker
+
+15. Mouse operations
+    * Mouse hover --- move_to_element(element)
+    * Right click --- context_click(element)
+    * Double click --- double_click(element)
+    * Drag and Drop --- drag_and_drop(source,taraget)
+    * Slider --- drag_and_drop_by_offset(element,X-axis,Y-axis)
+
+1. How to handle mouse operations.
+2. Different types of mouse operations.
+3. How to perform those mouse operations.
+4. Different methods are available.
+

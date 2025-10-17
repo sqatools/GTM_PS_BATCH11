@@ -31,7 +31,7 @@ method: When we write a function inside the class, then it is called method.
 
 
 
-constructor :  constructor that initialize the memory for the object of the class.
+constructor :  con structor that initialize the memory for the object of the class.
                -> constructor will be called when we create object of the class
                1.  default constructor :  default constructor will be executed whenever we create object of the class
 

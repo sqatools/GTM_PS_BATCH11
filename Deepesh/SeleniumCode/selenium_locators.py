@@ -75,6 +75,6 @@ class SeleniumLocators:
 
 
 
-obj = SeleniumLocators("EDGE")
+obj = SeleniumLocators("CHROME")
 obj.facebook_website()
 obj.greeting()

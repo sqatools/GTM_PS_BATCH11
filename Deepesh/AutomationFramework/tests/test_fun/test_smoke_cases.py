@@ -5,31 +5,31 @@ ENV = "PROD"
 
 @pytest.mark.smoke
 def test_addition():
-    n1 = 10
+    n1 = 50
     n2 = 60
-    assert n1 + n2 == 70
+    assert n1 + n2 == 110
 
 
-# @pytest.mark.skip
+@pytest.mark.skip
 @pytest.mark.smoke
 def test_multiplication():
-    v1 = 15
+    v1 = 5
     v2 = 6
-    assert v1*v2 == 90
+    assert v1*v2 == 30
 
 
 @pytest.mark.skipif(ENV == "TEST", reason="This code is not available in test ENV")
 @pytest.mark.smoke
 def test_division():
-    n1 = 100
+    n1 = 50
     n2 = 5
-    assert n1//n2 == 20
+    assert n1//n2 == 10
 
 
 def test_subtraction():
     b1= 500
     b2 = 50
-    assert b1 - b2 == 450
+    assert b1 - b2 == 400
 
 
 @pytest.mark.smoke

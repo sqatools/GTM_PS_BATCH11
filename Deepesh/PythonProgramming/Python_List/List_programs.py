@@ -104,8 +104,6 @@ item_list = ['Apple', 'Mango', 'Banana', 'Lichi']
 inventory_list = [200, 150, 500, 300]
 price_list = [100, 250, 50, 80]
 purchase_list = [10, 5, 10, 20]
-
-
 #up_inventory_list = [180, 145, 490, 280]
 total_bill = 0
 
@@ -125,5 +123,6 @@ print("_"*50)
 print(total_bill)
 print("update inventory :", inventory_list)
 print("_"*50)
+
 
 

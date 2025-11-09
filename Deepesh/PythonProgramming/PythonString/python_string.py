@@ -51,7 +51,7 @@ for i in range(str_len):
 
 """
 0 L
-1 e
+1 e 
 2 a
 3 r
 4 n
@@ -83,6 +83,7 @@ Rule1 : str[start_index: last_index]
 
 """
 strx = "India is a Best Country"
+    #   0123456789
 print(strx[0:5])  # India
 
 # default start_index is zero
@@ -94,7 +95,6 @@ print(strx[-12:])  # Best Country
 # start_index and last_index may has +ve and -ve value combination
 print(strx[1:-1])  # ndia is a Best Countr
 print(strx[-14:17])  # a Best C
-
 print(strx[10:0])  # Empty list
 
 print(strx[-15:-5])  # a Best Co

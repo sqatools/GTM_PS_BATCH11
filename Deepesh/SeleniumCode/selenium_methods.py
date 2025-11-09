@@ -89,7 +89,7 @@ class SeleniumMethods:
 
 
 obj = SeleniumMethods(browser='chrome')
-#obj.get_element_attribute_value()
+# obj.get_element_attribute_value()
 # obj.check_element_is_selected()
 # obj.check_element_is_enabled_displayed(user_name='Admin', pass_value='admin123')
 # obj.selenium_url_title()

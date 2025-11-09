@@ -1,4 +1,4 @@
-CSS Selectors Methods
+sCSS Selectors Methods
 1.  ID :  We we want to write a CSS selector with ID, then we have to add # as prefix
          ->  #email, #pass, #billing_email
 

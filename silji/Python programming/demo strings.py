@@ -1,0 +1,2 @@
+prog="\"python\""
+print(prog)

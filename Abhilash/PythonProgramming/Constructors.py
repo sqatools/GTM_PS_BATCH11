@@ -26,6 +26,8 @@
 # e1.display()  # 101 Abhi 1000000
 # e2.display()  # 102 Bujji 500000
 
-Inheritance
+#Inheritance
+
+
 
 

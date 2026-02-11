@@ -105,3 +105,14 @@ Inheritance :
 1.Aquaring all the variables and methods from one class another class is called Inheritance.
 2. we using for reusability
 3. Avoid duplication
+
+Type of Inheritance:
+
+1. single ---- only one parent and one child
+2. multi level --- only one parent and have multi levels of child
+3. Heirachy --- only one parent and can have any number of child
+4. multiple ---- multipe parents and only one child
+
+
+
+

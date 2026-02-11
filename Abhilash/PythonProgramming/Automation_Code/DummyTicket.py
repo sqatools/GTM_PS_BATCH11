@@ -12,7 +12,7 @@ driver.implicitly_wait(10)
 driver.get("https://www.dummyticket.com/dummy-ticket-for-visa-application/")
 driver.execute_script("window.scrollBy(0, 400);")
 
-# Radio buttons
+# Radio buttons -- Choose the correct option:
 driver.find_element(By.CSS_SELECTOR,"#product_550").click()
 # scroll
 Passenger = driver.find_element(By.XPATH,"//h3[normalize-space()='Passenger details:']")
@@ -117,12 +117,6 @@ for S in Soc:
     Radio = S.get_attribute("id")
     label = driver.find_element(By.XPATH, f"//label[@for='{Radio}']")
     print("Option:", label.text)
-
-
-
-
-
-
 
 
 

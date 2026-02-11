@@ -97,3 +97,11 @@
 2. Different types of mouse operations.
 3. How to perform those mouse operations.
 4. Different methods are available.
+
+
+Python Concepts:
+
+Inheritance :
+1.Aquaring all the variables and methods from one class another class is called Inheritance.
+2. we using for reusability
+3. Avoid duplication

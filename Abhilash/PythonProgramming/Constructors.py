@@ -26,7 +26,19 @@
 # e1.display()  # 101 Abhi 1000000
 # e2.display()  # 102 Bujji 500000
 
-#Inheritance
+
+# grade = "Pass"  # Global Variable
+# def results():
+#     grade = "Fail"  # local to global
+#     print(grade)
+#
+# re = results()
+# print(grade)   # Fail Pass
+
+
+
+
+
 
 
 

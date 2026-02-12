@@ -113,6 +113,9 @@ Type of Inheritance:
 3. Heirachy --- only one parent and can have any number of child
 4. multiple ---- multipe parents and only one child
 
-
-
+In class mention upper case and in Variable lower.
+super()-- function that will make the child class inherit all the methods and properties from its parent:
+Polimorphism --- one thing can have many forms
+overloading ---
+pass--- keyword when you do not want to add any other properties or methods to the class.
 

@@ -118,4 +118,36 @@ super()-- function that will make the child class inherit all the methods and pr
 Polimorphism --- one thing can have many forms
 overloading ---
 pass--- keyword when you do not want to add any other properties or methods to the class.
+---------------------------------------------------------
+Modules:
+
+1. collection of functions, class( Variables+ methods)
+
+1. How to create a module
+2. How to call the functions from module to another module
+3. same function in 2 modules
+
+Approach1: import modulename
+Aproach2 : from modulename import fuctions,or classes
+-------------------------------------------------------------------
+Packages:Collection of modules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

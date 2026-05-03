@@ -23,7 +23,7 @@ time.sleep(3)
 driver.find_element(By.ID, "identifierNext").click()
 driver.find_element(By.NAME, "Passwd").send_keys("abcd123")
 time.sleep(3)
-driver.find_element(By.ID, "passwordNext").click()
+//driver.find_element(By.ID, "passwordNext").click()
 time.sleep(15)
 driver.find_element(By.ID, ":lq").click()
 
